@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risk Management | PDKA</title>
+    <meta name="description" content="Comprehensive risk assessment and mitigation strategies for business continuity.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            900: '#0A1F44',
+                            800: '#1E3A5F',
+                            700: '#334155',
+                            600: '#64748B'
+                        },
+                        gold: '#C9A961'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .glass { backdrop-filter: blur(20px); background: rgba(255, 255, 255, 0.1); }
+        .navbar-scrolled { 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(20px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 glass border-b border-white/20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4 lg:py-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-gold to-yellow-500 rounded-2xl flex items-center justify-center shadow-xl">
+                        <i class="fas fa-balance-scale text-navy-900 text-xl"></i>
+                    </div>
+                    <div>
+                        <div class="font-bold text-xl lg:text-2xl text-white lg:text-gray-900 tracking-tight">PDKA</div>
+                        <div class="text-xs lg:text-sm font-medium text-gold lg:text-gray-600">P. Dilip Kumar & Associates</div>
+                    </div>
+                </div>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="../index.html#home" class="text-white lg:text-gray-700 hover:text-gold font-medium">Home</a>
+                    <a href="../index.html#services" class="text-white lg:text-gray-700 hover:text-gold font-semibold">Services</a>
+                    <a href="../index.html#insights" class="text-white lg:text-gray-700 hover:text-gold font-medium">Insights</a>
+                    <a href="../index.html#contact" class="text-white lg:text-gray-700 hover:text-gold font-medium">Contact</a>
+                </div>
+                <a href="../index.html#contact" class="bg-gold text-navy-900 px-6 py-3 rounded-full font-semibold text-sm uppercase tracking-wide hover:bg-yellow-500">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-32 pb-24 bg-gradient-to-br from-cyan-500 to-blue-600 min-h-[50vh] text-white relative">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 text-center pt-24">
+            <span class="text-gold text-sm font-semibold uppercase tracking-wider mb-4 inline-block">Risk Management</span>
+            <h1 class="text-4xl lg:text-5xl font-bold mb-6">Protect Your Business Future</h1>
+            <p class="text-xl text-white/90 max-w-2xl mx-auto mb-8">Comprehensive risk assessment and mitigation for sustainable growth</p>
+            <a href="../index.html#contact" class="bg-white text-navy-900 px-8 py-4 rounded-2xl font-semibold uppercase tracking-wide hover:shadow-xl hover:-translate-y-1 transition-all">Risk Assessment</a>
+        </div>
+    </section>
+
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto px-6 lg:px-8 py-20">
+        <article class="prose prose-lg max-w-none">
+            <p class="text-2xl font-semibold text-navy-900 mb-8">Proactive risk management to identify, assess, and mitigate threats before they impact your business.</p>
+            
+            <div class="bg-gold/10 border-l-4 border-gold p-6 rounded-r-xl mb-8">
+                <h2 class="text-2xl font-bold text-navy-900 mb-4">Risk Categories Covered</h2>
+                <ul class="list-disc pl-6 space-y-2 text-gray-700">
+                    <li>Financial risks & liquidity management</li>
+                    <li>Operational & supply chain risks</li>
+                    <li>Compliance & regulatory risks</li>
+                    <li>Cybersecurity & data risks</li>
+                    <li>Market & credit risks</li>
+                </ul>
+            </div>
+            
+            <h2 class="text-2xl font-bold text-navy-900 mt-12 mb-6">PDKA Risk Framework</h2>
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div>
+                    <h3 class="font-bold text-navy-900 mb-3">Risk Identification</h3>
+                    <p class="text-gray-600">Comprehensive risk register development using COSO/ISO 31000 frameworks.</p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-navy-900 mb-3">Risk Quantification</h3>
+                    <p class="text-gray-600">Financial impact modeling, probability assessment, scenario analysis.</p>
+                </div>
+            </div>
+            
+            <blockquote class="border-l-4 border-gold bg-gold/20 p-8 rounded-r-xl italic text-gray-700 my-12">
+                "Risk management is not cost - it's insurance for your business future."
+                <br><br>
+                <span class="not-italic font-semibold text-navy-900">- P. Dilip Kumar, Founder</span>
+            </blockquote>
+            
+            <div class="grid md:grid-cols-2 gap-6 mt-16">
+                <div class="bg-blue-50 p-6 rounded-2xl">
+                    <h3 class="font-bold text-navy-900 mb-2">ERM Dashboard</h3>
+                    <p class="text-gray-600">Real-time risk monitoring with heat maps, risk appetite tracking, automated alerts.</p>
+                </div>
+                <div class="bg-emerald-50 p-6 rounded-2xl">
+                    <h3 class="font-bold text-navy-900 mb-2">Stress Testing</h3>
+                    <p class="text-gray-600">Cash flow stress testing, liquidity adequacy, going concern analysis.</p>
+                </div>
+            </div>
+            
+            <h2 class="text-2xl font-bold text-navy-900 mt-16 mb-6">Risk Mitigation Tools</h2>
+            <ul class="grid md:grid-cols-2 gap-6 text-gray-700">
+                <li><i class="fas fa-check text-gold mr-3"></i>Hedging strategies & derivatives</li>
+                <li><i class="fas fa-check text-gold mr-3"></i>Insurance optimization</li>
+                <li><i class="fas fa-check text-gold mr-3"></i>Business continuity planning</li>
+                <li><i class="fas fa-check text-gold mr-3"></i>Crisis management protocols</li>
+            </ul>
+        </article>
+    </div>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-navy-900 to-navy-700 text-white text-center">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Secure Your Business Future</h2>
+            <p class="text-xl mb-8">Proactive risk management for sustainable growth</p>
+            <a href="../index.html#contact" class="bg-gold text-navy-900 px-12 py-6 rounded-2xl font-bold text-lg uppercase tracking-wide hover:shadow-2xl hover:-translate-y-2 transition-all inline-block">Risk Workshop</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+            <p>&copy; 2024 P. Dilip Kumar & Associates. All rights reserved. | <a href="../index.html" class="hover:text-gold">Back to Home</a></p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) navbar.classList.add('navbar-scrolled');
+            else navbar.classList.remove('navbar-scrolled');
+        });
+    </script>
+</body>
+</html>
