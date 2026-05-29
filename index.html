@@ -20,12 +20,12 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
                 extend: {
                     colors: {
                         navy: {
-                            900: '#0f172a',
-                            800: '#1e293b',
+                            900: '#431407',
+                            800: '#7c2d12',
                             700: '#334155',
                             600: '#475569'
                         },
-                        gold: '#1e40af'
+                        gold: '#ea580c'
                     },
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif']
@@ -58,7 +58,7 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
         * { font-family: 'Inter', sans-serif; }
         .glass { backdrop-filter: blur(20px); background: rgba(255, 255, 255, 0.1); }
         .gradient-hero { 
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: linear-gradient(135deg, #431407 0%, #7c2d12 100%);
             position: relative;
             overflow: hidden;
         }
@@ -69,7 +69,7 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 80%, rgba(30, 64, 175, 0.15) 0%, transparent 50%),
+            background: radial-gradient(circle at 20% 80%, rgba(234, 88, 12, 0.15) 0%, transparent 50%),
                         radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
             pointer-events: none;
         }
@@ -88,7 +88,7 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
         .loading-screen {
             position: fixed;
             inset: 0;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            background: linear-gradient(135deg, #431407 0%, #7c2d12 100%);
             z-index: 9999;
             display: flex;
             align-items: center;
@@ -98,7 +98,7 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
             width: 60px;
             height: 60px;
             border: 3px solid rgba(255,255,255,0.3);
-            border-top: 3px solid #1e40af;
+            border-top: 3px solid #ea580c;
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
@@ -126,23 +126,23 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
 
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-12">
-                    <a href="#home" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
+                    <a href="#home" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-orange-600 font-medium transition-all duration-300 py-2 px-3 relative group">
                         <span>Home</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 lg:bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
+                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-orange-500 lg:bg-orange-600 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#about" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
+                    <a href="#about" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-orange-600 font-medium transition-all duration-300 py-2 px-3 relative group">
                         <span>About</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold lg:bg-navy-900 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#services" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
+                    <a href="#services" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-orange-600 font-medium transition-all duration-300 py-2 px-3 relative group">
                         <span>Services</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold lg:bg-navy-900 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#insights" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
+                    <a href="#insights" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-orange-600 font-medium transition-all duration-300 py-2 px-3 relative group">
                         <span>Insights</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold lg:bg-navy-900 transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="#contact" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
+                    <a href="#contact" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-orange-600 font-medium transition-all duration-300 py-2 px-3 relative group">
                         <span>Contact</span>
                         <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold lg:bg-navy-900 transition-all duration-300 group-hover:w-full"></span>
                     </a>
@@ -150,7 +150,7 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
 
                 <!-- CTA & Mobile Menu -->
                 <div class="flex items-center space-x-4">
-                    <a href="#contact" class="hidden lg:block bg-blue-600 text-white px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wide hover:bg-blue-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                    <a href="#contact" class="hidden lg:block bg-orange-500 text-white px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wide hover:bg-orange-600 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                         Get Started
                     </a>
                     <button id="mobileMenuBtn" class="lg:hidden text-white p-2 flex-shrink-0">
@@ -178,14 +178,14 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
 
                 <h1 class="text-3xl sm:text-4xl lg:text-7xl font-bold text-white leading-tight mb-6 sm:mb-8">
                     Empowering Businesses with
-                    <span class="block text-blue-200">Financial Excellence</span>
+                    <span class="block text-orange-100">Financial Excellence</span>
                 </h1>
                 <p class="text-base sm:text-lg lg:text-2xl text-white/90 mb-8 sm:mb-12 max-w-2xl leading-relaxed">
                     Premier Chartered Accountancy firm delivering strategic financial solutions for 
                     ambitious organizations worldwide.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 sm:gap-6">
-                    <a href="#services" class="bg-blue-600 text-white px-6 sm:px-12 py-4 sm:py-6 rounded-2xl font-semibold text-base sm:text-lg uppercase tracking-wide hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex items-center justify-center group">
+                    <a href="#services" class="bg-orange-500 text-white px-6 sm:px-12 py-4 sm:py-6 rounded-2xl font-semibold text-base sm:text-lg uppercase tracking-wide hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex items-center justify-center group">
                         <i class="fas fa-rocket mr-3 group-hover:translate-x-2 transition-transform"></i>
                         Explore Services
                     </a>
@@ -203,19 +203,19 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-16 text-center stat-items">
                 <div class="group cursor-pointer hover:scale-105 transition-all duration-300">
-                    <div class="text-4xl lg:text-5xl font-bold text-blue-700 mb-4">15+</div>
+                    <div class="text-4xl lg:text-5xl font-bold text-orange-600 mb-4">15+</div>
                     <div class="text-lg font-semibold text-gray-700 uppercase tracking-wide">Years Experience</div>
                 </div>
                 <div class="group cursor-pointer hover:scale-105 transition-all duration-300">
-                    <div class="text-4xl lg:text-5xl font-bold text-blue-700 mb-4">3000+</div>
+                    <div class="text-4xl lg:text-5xl font-bold text-orange-600 mb-4">3000+</div>
 <div class="text-lg font-semibold text-gray-700 uppercase tracking-wide">Clients Served</div>
                 </div>
                 <div class="group cursor-pointer hover:scale-105 transition-all duration-300">
-                    <div class="text-4xl lg:text-5xl font-bold text-blue-700 mb-4">30+</div>
+                    <div class="text-4xl lg:text-5xl font-bold text-orange-600 mb-4">30+</div>
                     <div class="text-lg font-semibold text-gray-700 uppercase tracking-wide">Expert Team</div>
                 </div>
                 <div class="group cursor-pointer hover:scale-105 transition-all duration-300">
-                    <div class="text-4xl lg:text-5xl font-bold text-blue-700 mb-4">100%</div>
+                    <div class="text-4xl lg:text-5xl font-bold text-orange-600 mb-4">100%</div>
 <div class="text-lg font-semibold text-gray-700 uppercase tracking-wide">Dedicated Service Focus</div>
                 </div>
             </div>
@@ -227,7 +227,7 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="animate-fadeInUp">
-                    <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider">About PDKA</span>
+                    <span class="text-orange-500 text-sm font-semibold uppercase tracking-wider">About PDKA</span>
                     <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 mt-4 mb-8">Your Partner in Financial Success</h2>
                     <p class="text-xl text-slate-700 mb-6 leading-relaxed">
                         Founded with a vision to provide world-class financial advisory services, PDKA has established itself 
@@ -239,7 +239,7 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-start space-x-4">
-                            <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                 <i class="fas fa-check text-white text-sm"></i>
                             </div>
                             <div>
@@ -272,21 +272,21 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
                         <h3 class="text-3xl font-bold mb-8">Our Core Values</h3>
                         <div class="space-y-6">
                             <div class="flex items-start space-x-4">
-                                <i class="fas fa-shield-alt text-blue-400 text-2xl mt-2"></i>
+                                <i class="fas fa-shield-alt text-orange-300 text-2xl mt-2"></i>
                                 <div>
                                     <h4 class="text-xl font-semibold mb-2">Integrity</h4>
                                     <p class="text-white/80">Unwavering commitment to ethical practices and transparency</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
-                                <i class="fas fa-lightbulb text-blue-400 text-2xl mt-2"></i>
+                                <i class="fas fa-lightbulb text-orange-300 text-2xl mt-2"></i>
                                 <div>
                                     <h4 class="text-xl font-semibold mb-2">Innovation</h4>
                                     <p class="text-white/80">Cutting-edge solutions leveraging latest technology</p>
                                 </div>
                             </div>
                             <div class="flex items-start space-x-4">
-                                <i class="fas fa-heart text-blue-400 text-2xl mt-2"></i>
+                                <i class="fas fa-heart text-orange-300 text-2xl mt-2"></i>
                                 <div>
                                     <h4 class="text-xl font-semibold mb-2">Excellence</h4>
                                     <p class="text-white/80">Commitment to delivering superior quality in everything we do</p>
@@ -308,81 +308,81 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <a href="services/audit.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group relative focus:outline-none focus:ring-2 focus:ring-blue-600">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-navy-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                <a href="services/audit.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group relative focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-navy-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-calculator text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-blue-600 transition-colors">Audit & Assurance</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-orange-500 transition-colors">Audit & Assurance</h3>
                     <p class="text-slate-600 text-center mb-8 leading-relaxed">Comprehensive audit services ensuring compliance and financial integrity across all organizational levels</p>
-                    <div class="flex items-center justify-center text-blue-600 font-semibold">
+                    <div class="flex items-center justify-center text-orange-500 font-semibold">
                         <span class="hover:underline">Learn More</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </a>
 
 
                 <!-- Service 2 -->
-                <a href="services/virtual-cfo.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group relative z-10 focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <a href="services/virtual-cfo.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group relative z-10 focus:outline-none focus:ring-2 focus:ring-orange-500">
                     <div class="w-20 h-20 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-chart-line text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-blue-600 transition-colors">Virtual CFO</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-orange-500 transition-colors">Virtual CFO</h3>
                     <p class="text-slate-600 text-center mb-8 leading-relaxed">Strategic financial leadership without the overhead of a full-time executive</p>
-                    <div class="flex items-center justify-center text-blue-600 font-semibold">
+                    <div class="flex items-center justify-center text-orange-500 font-semibold">
                         <span class="hover:underline">Learn More</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </a>
 
 
                 <!-- Service 3 -->
-                <a href="services/tax-advisory.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <a href="services/tax-advisory.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group focus:outline-none focus:ring-2 focus:ring-orange-500">
                     <div class="w-20 h-20 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-file-invoice text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-blue-600 transition-colors">Tax Advisory</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-orange-500 transition-colors">Tax Advisory</h3>
 
                     <p class="text-slate-600 text-center mb-8 leading-relaxed">Expert tax planning and compliance services to optimize your financial position</p>
-                    <div class="flex items-center justify-center text-blue-600 font-semibold">
+                    <div class="flex items-center justify-center text-orange-500 font-semibold">
                         <span class="hover:underline">Learn More</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </a>
 
 
                 <!-- Service 4 -->
-                <a href="services/business-consulting.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <a href="services/business-consulting.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group focus:outline-none focus:ring-2 focus:ring-orange-500">
 <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-building text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-blue-600 transition-colors">Business Consulting</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-orange-500 transition-colors">Business Consulting</h3>
                     <p class="text-slate-600 text-center mb-8 leading-relaxed">Strategic consulting services to accelerate growth and operational efficiency</p>
-                    <div class="flex items-center justify-center text-blue-600 font-semibold">
+                    <div class="flex items-center justify-center text-orange-500 font-semibold">
                         <span class="hover:underline">Learn More</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </a>
 
 
                 <!-- Service 5 -->
-                <a href="services/compliance.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <a href="services/compliance.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group focus:outline-none focus:ring-2 focus:ring-orange-500">
                     <div class="w-20 h-20 bg-gradient-to-br from-pink-500 to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-handshake text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-blue-600 transition-colors">Compliance & Regulatory</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-orange-500 transition-colors">Compliance & Regulatory</h3>
 
                     <p class="text-slate-600 text-center mb-8 leading-relaxed">Ensure full compliance with all regulatory requirements and industry standards</p>
-                    <div class="flex items-center justify-center text-blue-600 font-semibold">
+                    <div class="flex items-center justify-center text-orange-500 font-semibold">
                         <span class="hover:underline">Learn More</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </a>
 
 
                 <!-- Service 6 -->
-                <a href="services/risk-management.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group focus:outline-none focus:ring-2 focus:ring-blue-600">
-                    <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
+                <a href="services/risk-management.html" class="card-hover block bg-white rounded-3xl p-10 shadow-xl group focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <div class="w-20 h-20 bg-gradient-to-br from-cyan-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-transform duration-300">
                         <i class="fas fa-shield-alt text-2xl text-white"></i>
                     </div>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-blue-600 transition-colors">Risk Management</h3>
+                    <h3 class="text-2xl font-bold text-slate-900 mb-6 text-center group-hover:text-orange-500 transition-colors">Risk Management</h3>
 
                     <p class="text-slate-600 text-center mb-8 leading-relaxed">Comprehensive risk assessment and mitigation strategies for your organization</p>
-                    <div class="flex items-center justify-center text-blue-600 font-semibold">
+                    <div class="flex items-center justify-center text-orange-500 font-semibold">
                         <span class="hover:underline">Learn More</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                     </div>
                 </a>
@@ -401,19 +401,19 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Article 1 -->
-                <a href="insights/tax-planning.html" class="card-hover block bg-gray-50 rounded-3xl overflow-hidden shadow-lg group focus:outline-none focus:ring-2 focus:ring-blue-600">
-                    <div class="h-48 bg-gradient-to-br from-blue-500 to-navy-600 group-hover:opacity-90 transition-opacity"></div>
+                <a href="insights/tax-planning.html" class="card-hover block bg-gray-50 rounded-3xl overflow-hidden shadow-lg group focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-navy-600 group-hover:opacity-90 transition-opacity"></div>
                     <div class="p-8">
                         <div class="flex items-center space-x-4 mb-4">
-                            <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider">Tax Planning</span>
+                            <span class="text-orange-500 text-sm font-semibold uppercase tracking-wider">Tax Planning</span>
                             <span class="text-slate-500 text-sm">Mar 2025</span>
 
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">2025 Tax Planning Strategies for Businesses</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-orange-500 transition-colors">2025 Tax Planning Strategies for Businesses</h3>
 
 
                         <p class="text-slate-600 mb-6">Discover the most effective tax planning strategies to minimize your tax liability and maximize savings in 2024.</p>
-                        <div class="flex items-center text-blue-600 font-semibold">
+                        <div class="flex items-center text-orange-500 font-semibold">
                             <span class="hover:underline">Read Article</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </div>
                     </div>
@@ -421,19 +421,19 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
 
 
                 <!-- Article 2 -->
-                <a href="insights/scaling-business.html" class="card-hover block bg-gray-50 rounded-3xl overflow-hidden shadow-lg group focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <a href="insights/scaling-business.html" class="card-hover block bg-gray-50 rounded-3xl overflow-hidden shadow-lg group focus:outline-none focus:ring-2 focus:ring-orange-500">
                     <div class="h-48 bg-gradient-to-br from-emerald-500 to-green-600 group-hover:opacity-90 transition-opacity"></div>
                     <div class="p-8">
                         <div class="flex items-center space-x-4 mb-4">
-                            <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider">Financial Growth</span>
+                            <span class="text-orange-500 text-sm font-semibold uppercase tracking-wider">Financial Growth</span>
                             <span class="text-slate-500 text-sm">Mar 2025</span>
 
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">Scaling Your Business: Financial Best Practices 2025</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-orange-500 transition-colors">Scaling Your Business: Financial Best Practices 2025</h3>
 
 
                         <p class="text-slate-600 mb-6">Essential financial practices to ensure sustainable growth while managing risks and maintaining profitability.</p>
-                        <div class="flex items-center text-blue-600 font-semibold">
+                        <div class="flex items-center text-orange-500 font-semibold">
                             <span class="hover:underline font-medium">Read Article</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
 
                         </div>
@@ -443,19 +443,19 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
                 </a>
 
                 <!-- Article 3 -->
-                <a href="insights/regulatory-changes.html" class="card-hover block bg-gray-50 rounded-3xl overflow-hidden shadow-lg group focus:outline-none focus:ring-2 focus:ring-blue-600">
+                <a href="insights/regulatory-changes.html" class="card-hover block bg-gray-50 rounded-3xl overflow-hidden shadow-lg group focus:outline-none focus:ring-2 focus:ring-orange-500">
                     <div class="h-48 bg-gradient-to-br from-purple-500 to-violet-600 group-hover:opacity-90 transition-opacity"></div>
                     <div class="p-8">
                         <div class="flex items-center space-x-4 mb-4">
-                            <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider">Compliance</span>
+                            <span class="text-orange-500 text-sm font-semibold uppercase tracking-wider">Compliance</span>
                             <span class="text-slate-500 text-sm">Mar 2025</span>
 
                         </div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors">Navigating Regulatory Changes 2025: A Complete Guide</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4 group-hover:text-orange-500 transition-colors">Navigating Regulatory Changes 2025: A Complete Guide</h3>
 
 
                         <p class="text-slate-600 mb-6">Stay ahead of regulatory changes with our comprehensive guide to compliance and risk management strategies.</p>
-                        <div class="flex items-center text-blue-600 font-semibold">
+                        <div class="flex items-center text-orange-500 font-semibold">
                             <span class="hover:underline font-medium">Read Article</span> <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
                         </div>
 
@@ -469,12 +469,12 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
     <!-- CTA Section -->
     <section class="py-32 bg-gradient-to-r from-slate-900 to-slate-800 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10">
-            <div class="absolute inset-0 bg-pattern" style="background-image: radial-gradient(circle at 20% 80%, rgba(30, 64, 175, 0.2) 0%, transparent 50%);"></div>
+            <div class="absolute inset-0 bg-pattern" style="background-image: radial-gradient(circle at 20% 80%, rgba(234, 88, 12, 0.2) 0%, transparent 50%);"></div>
         </div>
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <h2 class="text-2xl sm:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8">Ready to Transform Your Financial Future?</h2>
             <p class="text-base sm:text-lg lg:text-xl text-white/90 mb-8 sm:mb-12">Let PDKA help you achieve your financial goals with expert guidance and strategic solutions.</p>
-            <a href="#contact" class="inline-block bg-blue-600 text-white px-6 sm:px-12 py-4 sm:py-6 rounded-2xl font-semibold text-base sm:text-lg uppercase tracking-wide hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+            <a href="#contact" class="inline-block bg-orange-500 text-white px-6 sm:px-12 py-4 sm:py-6 rounded-2xl font-semibold text-base sm:text-lg uppercase tracking-wide hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
                 Schedule Consultation
             </a>
         </div>
@@ -490,8 +490,8 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
                 <!-- Contact Card 1 -->
-                <a href="tel:+918041219056" class="card-hover bg-white rounded-3xl p-8 shadow-lg text-center block border-t-4 border-blue-600">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-navy-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <a href="tel:+918041219056" class="card-hover bg-white rounded-3xl p-8 shadow-lg text-center block border-t-4 border-orange-500">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-navy-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-phone text-2xl text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-4">Phone</h3>
@@ -501,7 +501,7 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
 
 
                 <!-- Contact Card 2 -->
-                <a href="mailto:info@pdka.com" class="card-hover bg-white rounded-3xl p-8 shadow-lg text-center block border-t-4 border-blue-600">
+                <a href="mailto:info@pdka.com" class="card-hover bg-white rounded-3xl p-8 shadow-lg text-center block border-t-4 border-orange-500">
                     <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-envelope text-2xl text-white"></i>
                     </div>
@@ -512,13 +512,13 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
 
 
                 <!-- Contact Card 3 -->
-                <a href="https://www.google.com/maps/search/Sampurna+Chambers,+Vasavi+Temple+Street,+VV+Puram,+Bangalore" target="_blank" rel="noopener noreferrer" class="card-hover bg-white rounded-3xl p-8 shadow-lg text-center border-t-4 border-blue-600 hover:shadow-2xl transition-all duration-300 block group">
+                <a href="https://www.google.com/maps/search/Sampurna+Chambers,+Vasavi+Temple+Street,+VV+Puram,+Bangalore" target="_blank" rel="noopener noreferrer" class="card-hover bg-white rounded-3xl p-8 shadow-lg text-center border-t-4 border-orange-500 hover:shadow-2xl transition-all duration-300 block group">
                     <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                         <i class="fas fa-map-marker-alt text-2xl text-white"></i>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 mb-4">Location</h3>
                     <p class="text-slate-600 mb-3 font-semibold">Unit F-5 & F-6, First Floor,<br/>Sampurna Chambers<br/>No. 13, Vasavi Temple Street, V.V. Puram<br/>Bangalore – 560 004 INDIA</p>
-                    <p class="text-blue-600 font-semibold flex items-center justify-center gap-2 group-hover:text-blue-700">
+                    <p class="text-orange-500 font-semibold flex items-center justify-center gap-2 group-hover:text-orange-600">
                         <i class="fas fa-external-link-alt text-sm"></i>
                         View on Google Maps
                     </p>
@@ -538,15 +538,15 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
                 <form class="space-y-6">
                     <div>
                         <label class="block text-slate-900 font-semibold mb-3">Full Name</label>
-                        <input type="text" placeholder="Your name" class="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-colors duration-300" required>
+                        <input type="text" placeholder="Your name" class="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:border-orange-500 focus:outline-none transition-colors duration-300" required>
                     </div>
                     <div>
                         <label class="block text-slate-900 font-semibold mb-3">Email Address</label>
-                        <input type="email" placeholder="your@email.com" class="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-colors duration-300" required>
+                        <input type="email" placeholder="your@email.com" class="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:border-orange-500 focus:outline-none transition-colors duration-300" required>
                     </div>
                     <div>
                         <label class="block text-slate-900 font-semibold mb-3">Service Interest</label>
-                        <select class="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-colors duration-300" required>
+                        <select class="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:border-orange-500 focus:outline-none transition-colors duration-300" required>
                             <option>Select a service</option>
                             <option>Audit & Assurance</option>
                             <option>Virtual CFO</option>
@@ -558,9 +558,9 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
                     </div>
                     <div>
                         <label class="block text-slate-900 font-semibold mb-3">Message</label>
-                        <textarea rows="5" placeholder="Tell us about your requirements..." class="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:border-blue-600 focus:outline-none transition-colors duration-300 resize-none" required></textarea>
+                        <textarea rows="5" placeholder="Tell us about your requirements..." class="w-full px-6 py-4 rounded-xl border-2 border-slate-200 focus:border-orange-500 focus:outline-none transition-colors duration-300 resize-none" required></textarea>
                     </div>
-                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-wide hover:bg-blue-700">
+                    <button type="submit" class="w-full bg-orange-500 text-white font-bold py-4 rounded-xl hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 uppercase tracking-wide hover:bg-orange-600">
                         Send Message
                     </button>
                 </form>
@@ -579,13 +579,13 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
                     </div>
                     <p class="text-white/70 mb-6">Empowering businesses with financial excellence and strategic solutions.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all duration-300">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all duration-300">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all duration-300">
+                        <a href="#" class="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-white transition-all duration-300">
                             <i class="fab fa-facebook"></i>
                         </a>
 
@@ -595,36 +595,36 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
 
                 <!-- Footer Col 2 -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-blue-300">Services</h4>
+                    <h4 class="text-lg font-bold mb-6 text-orange-200">Services</h4>
                     <ul class="space-y-3 text-white/70">
-                        <li><a href="#services" class="hover:text-blue-300 transition-colors duration-300">Audit & Assurance</a></li>
-                        <li><a href="#services" class="hover:text-blue-300 transition-colors duration-300">Virtual CFO</a></li>
-                        <li><a href="#services" class="hover:text-blue-300 transition-colors duration-300">Tax Advisory</a></li>
-                        <li><a href="#services" class="hover:text-blue-300 transition-colors duration-300">Business Consulting</a></li>
-                        <li><a href="#services" class="hover:text-blue-300 transition-colors duration-300">Risk Management</a></li>
+                        <li><a href="#services" class="hover:text-orange-200 transition-colors duration-300">Audit & Assurance</a></li>
+                        <li><a href="#services" class="hover:text-orange-200 transition-colors duration-300">Virtual CFO</a></li>
+                        <li><a href="#services" class="hover:text-orange-200 transition-colors duration-300">Tax Advisory</a></li>
+                        <li><a href="#services" class="hover:text-orange-200 transition-colors duration-300">Business Consulting</a></li>
+                        <li><a href="#services" class="hover:text-orange-200 transition-colors duration-300">Risk Management</a></li>
                     </ul>
                 </div>
 
                 <!-- Footer Col 3 -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-blue-300">Company</h4>
+                    <h4 class="text-lg font-bold mb-6 text-orange-200">Company</h4>
                     <ul class="space-y-3 text-white/70">
-                        <li><a href="#about" class="hover:text-blue-300 transition-colors duration-300">About Us</a></li>
-                        <li><a href="#insights" class="hover:text-blue-300 transition-colors duration-300">Insights</a></li>
-                        <li><a href="#contact" class="hover:text-blue-300 transition-colors duration-300">Contact</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-blue-300 transition-colors duration-300">Privacy Policy</a></li>
-                        <li><a href="terms-conditions.html" class="hover:text-blue-300 transition-colors duration-300">Terms & Conditions</a></li>
+                        <li><a href="#about" class="hover:text-orange-200 transition-colors duration-300">About Us</a></li>
+                        <li><a href="#insights" class="hover:text-orange-200 transition-colors duration-300">Insights</a></li>
+                        <li><a href="#contact" class="hover:text-orange-200 transition-colors duration-300">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-orange-200 transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="terms-conditions.html" class="hover:text-orange-200 transition-colors duration-300">Terms & Conditions</a></li>
 
                     </ul>
                 </div>
 
                 <!-- Footer Col 4 -->
                 <div>
-                    <h4 class="text-lg font-bold mb-6 text-blue-300">Newsletter</h4>
+                    <h4 class="text-lg font-bold mb-6 text-orange-200">Newsletter</h4>
                     <p class="text-white/70 mb-4">Subscribe to our newsletter for latest insights and updates.</p>
                     <div class="flex">
                         <input type="email" placeholder="Your email" class="flex-1 px-4 py-3 rounded-l-lg text-navy-900 focus:outline-none" required>
-                        <button class="bg-blue-600 text-white px-4 py-3 rounded-r-lg font-semibold hover:bg-blue-700 transition-colors duration-300">
+                        <button class="bg-orange-500 text-white px-4 py-3 rounded-r-lg font-semibold hover:bg-orange-600 transition-colors duration-300">
                             <i class="fas fa-paper-plane"></i>
                         </button>
                     </div>
