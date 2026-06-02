@@ -662,6 +662,14 @@
             }, 1100);
         });
 
+        // FORCE HEADER FIXED — re-apply every frame in case any CSS overrides it
+        const hdr = document.querySelector('header');
+        function lockHeader() {
+            hdr.style.cssText = "position:fixed!important;top:0!important;left:0!important;right:0!important;height:64px!important;z-index:2147483647!important;display:flex!important;align-items:center!important;justify-content:space-between!important;padding:0 24px!important;pointer-events:none!important;";
+            requestAnimationFrame(lockHeader);
+        }
+        lockHeader();
+
         // Typewriter
         const phrases = ['Financial Excellence', 'Tax Advisory', 'Audit & Assurance', 'Business Growth', 'CFO Services'];
         let pi = 0, ci = 0, deleting = false;
