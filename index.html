@@ -27,7 +27,7 @@
 
         /* ── Hero: white left panel, orange right panel ── */
         .hero-wrap { background: #fff; min-height: 100vh; display: flex; align-items: stretch; }
-        .hero-left { flex: 1; display: flex; align-items: center; padding: 7rem 4rem 4rem 4rem; }
+        .hero-left { flex: 1; display: flex; align-items: center; padding: 7rem 4rem 4rem 4rem; padding-top: 6rem; }
         .hero-right {
             width: 42%;
             background: #f97316;
@@ -95,7 +95,7 @@
         .loader-bar { width: 160px; height: 3px; background: #e2e8f0; border-radius: 9px; overflow: hidden; }
         .loader-fill { height: 100%; background: #f97316; border-radius: 9px; animation: fill 1s ease forwards; }
         @keyframes fill { from { width: 0 } to { width: 100% } }
-        @keyframes fadeInOut { 0% { opacity:0.2; } 30% { opacity:1; } 70% { opacity:1; } 100% { opacity:0.2; } }
+        @keyframes breathe { 0% { opacity:0.55; transform:scale(0.97); } 50% { opacity:1; transform:scale(1.02); } 100% { opacity:0.55; transform:scale(0.97); } }
         @keyframes spin { to { transform: rotate(360deg); } }
 
         /* ── Pulse dot ── */
@@ -155,7 +155,7 @@
     </div>
 
     <!-- ── HERO ── -->
-    <section id="home" class="hero-wrap" style="padding-top:84px;">
+    <section id="home" class="hero-wrap" style="padding-top:0;">
         <!-- Left: white -->
         <div class="hero-left">
             <div class="max-w-xl">
@@ -192,7 +192,7 @@
                                 <span class="text-[#f97316] text-xs font-bold uppercase tracking-widest">Established 1998</span>
                             </div>
                             <!-- Big centred number with fade in/out -->
-                            <div style="animation:fadeInOut 3s ease-in-out infinite;">
+                            <div style="animation:breathe 4s ease-in-out infinite;">
                                 <div class="flex items-end justify-center gap-1 mb-3">
                                     <span class="font-black text-slate-900 leading-none" style="font-size:5.5rem;line-height:1;letter-spacing:-4px;"><span class="counter">28</span></span>
                                     <span class="text-[#f97316] font-black mb-2" style="font-size:3rem;line-height:1;">+</span>
@@ -500,7 +500,8 @@
                         <i class="fas fa-phone text-white"></i>
                     </div>
                     <h3 class="font-bold text-slate-900 mb-1">Phone</h3>
-                    <p class="text-slate-600 font-semibold mb-1">080-4121-9056</p>
+                    <p class="text-slate-600 font-semibold mb-0.5">080-4121-9056</p>
+                    <p class="text-slate-600 font-semibold mb-1">080-4121-9057</p>
                     <p class="text-slate-400 text-xs">Monday – Friday, 9AM – 6PM</p>
                 </a>
                 <a href="mailto:info@pdka.com" class="card reveal d2 bg-slate-50 rounded-2xl p-6 text-center block border border-slate-100 group">
@@ -516,7 +517,7 @@
                         <i class="fas fa-map-marker-alt text-white"></i>
                     </div>
                     <h3 class="font-bold text-slate-900 mb-1">Location</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">Unit F-5 & F-6, Sampurna Chambers,<br>Vasavi Temple Street, V.V. Puram,<br>Bangalore – 560 004</p>
+                    <p class="text-slate-600 text-sm leading-relaxed">Unit FF-5 & FF-6, Sampurna Chambers,<br>Vasavi Temple Street, V.V. Puram,<br>Bangalore – 560 004</p>
                 </a>
             </div>
             <!-- Map -->
