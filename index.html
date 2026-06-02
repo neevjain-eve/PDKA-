@@ -141,22 +141,42 @@
         .wave-divider svg { display: block; }
     </style>
 
-    <!-- Navbar override after Tailwind -->
+    <!-- Navbar overrides after Tailwind -->
     <style>
+        /* Pill = just the links, auto-width, centered */
         #navbar {
             position: fixed !important;
             top: 16px !important;
             left: 50% !important;
             transform: translateX(-50%) !important;
-            width: calc(100% - 48px) !important;
-            max-width: 1100px !important;
+            width: auto !important;
             background: rgba(255,255,255,0.96) !important;
             backdrop-filter: blur(20px) !important;
             border: 1px solid rgba(0,0,0,0.08) !important;
             border-radius: 9999px !important;
             box-shadow: 0 4px 24px rgba(0,0,0,0.12) !important;
-            padding: 0 1.75rem !important;
+            padding: 0 2rem !important;
             z-index: 9998 !important;
+        }
+        /* Logo: top-left corner */
+        #nav-logo {
+            position: fixed !important;
+            top: 16px !important;
+            left: 24px !important;
+            z-index: 9998 !important;
+            height: 56px !important;
+            display: flex !important;
+            align-items: center !important;
+        }
+        /* Get Started: top-right corner */
+        #nav-cta {
+            position: fixed !important;
+            top: 16px !important;
+            right: 24px !important;
+            z-index: 9998 !important;
+            height: 56px !important;
+            display: flex !important;
+            align-items: center !important;
         }
     </style>
 </head>
@@ -169,24 +189,32 @@
         <p class="text-slate-400 text-xs font-medium tracking-widest uppercase mt-2">Loading...</p>
     </div>
 
-    <!-- Nav -->
+    <!-- Logo: fixed top-left -->
+    <div id="nav-logo">
+        <img src="logo.png" alt="PDKA" class="h-9 w-auto">
+    </div>
+
+    <!-- Pill nav: fixed center, links only -->
     <nav id="navbar">
-        <div class="flex justify-between items-center h-14">
-            <img src="logo.png" alt="PDKA" class="h-8 lg:h-9 w-auto flex-shrink-0">
-            <div class="hidden lg:flex items-center gap-8">
-                <a href="#home"     class="nav-link ul-hover font-medium text-sm transition-colors">Home</a>
-                <a href="#about"    class="nav-link ul-hover font-medium text-sm transition-colors">About</a>
-                <a href="#services" class="nav-link ul-hover font-medium text-sm transition-colors">Services</a>
-                <a href="#insights" class="nav-link ul-hover font-medium text-sm transition-colors">Insights</a>
-                <a href="#contact"  class="nav-link ul-hover font-medium text-sm transition-colors">Contact</a>
-            </div>
-            <div class="flex items-center gap-3 flex-shrink-0">
-                <a href="#contact" class="hidden lg:inline-block bg-[#f97316] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#ea6d0e] transition-all">Get Started</a>
-                <button id="mobileMenuBtn" class="lg:hidden p-1 text-slate-600"><i class="fas fa-bars text-lg"></i></button>
-            </div>
+        <div class="flex items-center gap-8 h-14">
+            <a href="#home"     class="nav-link ul-hover font-medium text-sm transition-colors">Home</a>
+            <a href="#about"    class="nav-link ul-hover font-medium text-sm transition-colors">About</a>
+            <a href="#services" class="nav-link ul-hover font-medium text-sm transition-colors">Services</a>
+            <a href="#insights" class="nav-link ul-hover font-medium text-sm transition-colors">Insights</a>
+            <a href="#contact"  class="nav-link ul-hover font-medium text-sm transition-colors">Contact</a>
         </div>
     </nav>
-    <!-- Mobile menu -->
+
+    <!-- Get Started: fixed top-right -->
+    <div id="nav-cta">
+        <a href="#contact" class="bg-[#f97316] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#ea6d0e] transition-all shadow-lg shadow-orange-100">Get Started</a>
+    </div>
+
+    <!-- Mobile menu button (top-right on mobile) -->
+    <button id="mobileMenuBtn" class="lg:hidden fixed top-5 right-6 z-[9999] p-2 bg-white rounded-full shadow-md text-slate-600">
+        <i class="fas fa-bars text-lg"></i>
+    </button>
+    <!-- Mobile menu dropdown -->
     <div id="mobileMenu" class="hidden lg:hidden">
         <a href="#home"     class="block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-orange-50 hover:text-[#f97316] transition-colors text-sm">Home</a>
         <a href="#about"    class="block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-orange-50 hover:text-[#f97316] transition-colors text-sm">About</a>
