@@ -26,7 +26,7 @@
         /* ── Floating pill navbar — always visible, never moves ── */
         #navbar {
             position: fixed !important;
-            top: 16px !important;
+            top: 20px !important;
             left: 50% !important;
             transform: translateX(-50%) !important;
             width: calc(100% - 48px) !important;
@@ -146,7 +146,7 @@
         /* Pill = just the links, auto-width, centered */
         #navbar {
             position: fixed !important;
-            top: 16px !important;
+            top: 20px !important;
             left: 50% !important;
             transform: translateX(-50%) !important;
             width: auto !important;
@@ -161,22 +161,26 @@
         /* Logo: top-left corner */
         #nav-logo {
             position: fixed !important;
-            top: 16px !important;
+            top: 20px !important;
             left: 24px !important;
             z-index: 9998 !important;
             height: 56px !important;
             display: flex !important;
             align-items: center !important;
+            will-change: transform !important;
+            transform: translateZ(0) !important;
         }
         /* Get Started: top-right corner */
         #nav-cta {
             position: fixed !important;
-            top: 16px !important;
+            top: 20px !important;
             right: 24px !important;
             z-index: 9998 !important;
             height: 56px !important;
             display: flex !important;
             align-items: center !important;
+            will-change: transform !important;
+            transform: translateZ(0) !important;
         }
     </style>
 </head>
@@ -191,7 +195,7 @@
 
     <!-- Logo: fixed top-left -->
     <div id="nav-logo">
-        <img src="logo.png" alt="PDKA" class="h-9 w-auto">
+        <img src="logo.png" alt="PDKA" class="h-12 w-auto">
     </div>
 
     <!-- Pill nav: fixed center, links only -->
@@ -207,7 +211,7 @@
 
     <!-- Get Started: fixed top-right -->
     <div id="nav-cta">
-        <a href="#contact" class="bg-[#f97316] text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-[#ea6d0e] transition-all shadow-lg shadow-orange-100">Get Started</a>
+        <a href="#contact" class="bg-white text-[#f97316] px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-orange-50 transition-all shadow-lg">Get Started</a>
     </div>
 
     <!-- Mobile menu button (top-right on mobile) -->
