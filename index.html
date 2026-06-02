@@ -169,6 +169,7 @@
             align-items: center !important;
             will-change: transform !important;
             transform: translateZ(0) !important;
+            background: transparent;
         }
         /* Get Started: top-right corner */
         #nav-cta {
@@ -184,7 +185,8 @@
         }
     </style>
 </head>
-<body class="bg-white text-slate-800 overflow-x-hidden">
+<body class="bg-white text-slate-800">
+    <div style="overflow-x:hidden;">
 
     <!-- Loading -->
     <div id="loader" class="loader">
@@ -799,5 +801,6 @@
         }, { threshold: 0.5 });
         document.querySelectorAll('.counter').forEach(el => co.observe(el));
     </script>
+    </div>
 </body>
 </html>
