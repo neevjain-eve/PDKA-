@@ -199,15 +199,55 @@
 
         <!-- Right: orange with floating cards -->
         <div class="hero-right">
-            <!-- Global presence -->
-            <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mt-8 z-10">Trusted by businesses across</p>
-            <div class="flex flex-wrap gap-2 justify-center mt-3 z-10">
-                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇮🇳 India</span>
-                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇺🇸 USA</span>
-                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇬🇧 UK</span>
-                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇦🇪 Dubai</span>
-                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇸🇬 Singapore</span>
-                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇦🇺 Australia</span>
+            <!-- Services offered widget -->
+            <div class="float-a bg-white rounded-2xl shadow-xl p-5 mb-4 w-72 z-10">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">Professional Services</p>
+                <div class="space-y-2">
+                    <div class="flex items-center gap-3 bg-orange-50 rounded-xl px-3 py-2">
+                        <div class="w-7 h-7 bg-[#f97316] rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-calculator text-white text-xs"></i></div>
+                        <span class="text-slate-700 text-sm font-medium">Audit &amp; Assurance</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-orange-50 rounded-xl px-3 py-2">
+                        <div class="w-7 h-7 bg-[#f97316] rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-file-invoice text-white text-xs"></i></div>
+                        <span class="text-slate-700 text-sm font-medium">Tax Advisory</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-orange-50 rounded-xl px-3 py-2">
+                        <div class="w-7 h-7 bg-[#f97316] rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-chart-line text-white text-xs"></i></div>
+                        <span class="text-slate-700 text-sm font-medium">Virtual CFO</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-orange-50 rounded-xl px-3 py-2">
+                        <div class="w-7 h-7 bg-[#f97316] rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-shield-alt text-white text-xs"></i></div>
+                        <span class="text-slate-700 text-sm font-medium">Risk Management</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ICAI compliance badge -->
+            <div class="float-b bg-white rounded-2xl shadow-xl px-5 py-4 mb-4 w-72 z-10 flex items-center gap-4">
+                <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <i class="fas fa-certificate text-[#f97316] text-xl"></i>
+                </div>
+                <div>
+                    <p class="text-xs text-slate-400 font-medium">Registered with</p>
+                    <p class="text-slate-900 font-bold text-sm">ICAI Compliant Firm</p>
+                    <p class="text-xs text-slate-400 mt-0.5">FCA · CISA · DISA qualified</p>
+                </div>
+            </div>
+
+            <!-- Countries widget -->
+            <div class="float-c bg-white rounded-2xl shadow-xl px-5 py-4 w-72 z-10">
+                <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">International Presence</p>
+                <div class="flex flex-wrap gap-1.5">
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇮🇳 India</span>
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇺🇸 USA</span>
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇬🇧 UK</span>
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇦🇪 Dubai</span>
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇸🇬 Singapore</span>
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇦🇺 Australia</span>
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇮🇪 Ireland</span>
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇯🇵 Japan</span>
+                    <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇮🇹 Italy</span>
+                </div>
             </div>
         </div>
     </section>
@@ -628,14 +668,13 @@
         window.addEventListener('scroll', () => {
             const y = window.scrollY;
             if (y <= 10) { showNav(); }
-            else if (y > lastY + 5) { hideNav(); }   // scrolling down
-            else if (y < lastY - 5) { showNav(); }   // scrolling up
-            lastY = y;
+            else { hideNav(); }
         }, { passive: true });
 
-        // Show when mouse moves to top 80px of screen
+        // Show when mouse moves to top 60px of screen
         document.addEventListener('mousemove', e => {
-            if (e.clientY < 80) showNav();
+            if (e.clientY < 60) showNav();
+            else if (window.scrollY > 10) hideNav();
         });
 
         // Smooth scroll
