@@ -23,36 +23,31 @@
     <style>
         * { font-family: 'Inter', sans-serif; }
 
-        /* ── Floating pill navbar ── */
+        /* ── Floating pill navbar — always visible, never moves ── */
         #navbar {
+            position: fixed;
             top: 16px;
             left: 50%;
             transform: translateX(-50%);
             width: calc(100% - 48px);
             max-width: 1100px;
-            background: rgba(255,255,255,0.92);
+            background: rgba(255,255,255,0.96);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border: 1px solid rgba(0,0,0,0.08);
             border-radius: 9999px;
             box-shadow: 0 4px 24px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06);
-            padding: 0 1.5rem;
-            transition: box-shadow 0.3s ease, background 0.3s ease;
-        }
-        #navbar.scrolled {
-            box-shadow: 0 8px 32px rgba(0,0,0,0.14);
-            background: rgba(255,255,255,0.98);
+            padding: 0 1.75rem;
+            z-index: 50;
         }
         #navbar .nav-link { color: #475569; }
         #navbar .nav-link:hover { color: #f97316; }
-        #navbar #mobileMenuBtn { color: #475569; }
-        /* mobile menu needs to break out of pill shape */
         #mobileMenu {
             position: fixed;
             top: 76px; left: 50%;
             transform: translateX(-50%);
             width: calc(100% - 48px);
-            background: rgba(255,255,255,0.97);
+            background: rgba(255,255,255,0.98);
             backdrop-filter: blur(20px);
             border-radius: 20px;
             border: 1px solid rgba(0,0,0,0.08);
@@ -155,9 +150,9 @@
     </div>
 
     <!-- Nav -->
-    <nav id="navbar" class="fixed z-50">
+    <nav id="navbar">
         <div class="flex justify-between items-center h-14">
-            <img src="logo.png" alt="PDKA" class="h-8 lg:h-9 w-auto">
+            <img src="logo.png" alt="PDKA" class="h-8 lg:h-9 w-auto flex-shrink-0">
             <div class="hidden lg:flex items-center gap-8">
                 <a href="#home"     class="nav-link ul-hover font-medium text-sm transition-colors">Home</a>
                 <a href="#about"    class="nav-link ul-hover font-medium text-sm transition-colors">About</a>
@@ -165,14 +160,14 @@
                 <a href="#insights" class="nav-link ul-hover font-medium text-sm transition-colors">Insights</a>
                 <a href="#contact"  class="nav-link ul-hover font-medium text-sm transition-colors">Contact</a>
             </div>
-            <div class="flex items-center gap-3">
-                <a href="#contact" class="hidden lg:block bg-[#f97316] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#ea6d0e] transition-all duration-300">Get Started</a>
-                <button id="mobileMenuBtn" class="lg:hidden p-2"><i class="fas fa-bars text-lg"></i></button>
+            <div class="flex items-center gap-3 flex-shrink-0">
+                <a href="#contact" class="hidden lg:inline-block bg-[#f97316] text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-[#ea6d0e] transition-all">Get Started</a>
+                <button id="mobileMenuBtn" class="lg:hidden p-1 text-slate-600"><i class="fas fa-bars text-lg"></i></button>
             </div>
         </div>
     </nav>
-    <!-- Mobile menu (outside nav to avoid pill clipping) -->
-    <div id="mobileMenu" class="hidden lg:hidden fixed z-40">
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="hidden lg:hidden">
         <a href="#home"     class="block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-orange-50 hover:text-[#f97316] transition-colors text-sm">Home</a>
         <a href="#about"    class="block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-orange-50 hover:text-[#f97316] transition-colors text-sm">About</a>
         <a href="#services" class="block px-4 py-2.5 text-slate-700 font-medium rounded-xl hover:bg-orange-50 hover:text-[#f97316] transition-colors text-sm">Services</a>
@@ -710,10 +705,7 @@
         });
 
         // Navbar scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 40);
-        });
+        // navbar is always the floating pill — no scroll class needed
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(a => {
