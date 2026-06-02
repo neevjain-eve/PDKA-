@@ -30,34 +30,52 @@
         .navbar-scrolled .nav-link:hover { color: #f97316 !important; }
         .navbar-scrolled #mobileMenuBtn { color: #334155; }
 
-        /* ── Hero ── */
-        .hero-bg {
+        /* ── Hero: white left panel, orange right panel ── */
+        .hero-wrap { background: #fff; min-height: 100vh; display: flex; align-items: stretch; }
+        .hero-left { flex: 1; display: flex; align-items: center; padding: 7rem 4rem 4rem 4rem; }
+        .hero-right {
+            width: 42%;
             background: #f97316;
-            position: relative;
-            overflow: hidden;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            padding: 7rem 3rem 4rem;
+            position: relative; overflow: hidden;
         }
-        .hero-bg::before {
+        .hero-right::before {
             content: '';
-            position: absolute;
-            width: 600px; height: 600px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.06);
-            top: -200px; right: -150px;
-            pointer-events: none;
+            position: absolute; width: 500px; height: 500px; border-radius: 50%;
+            background: rgba(255,255,255,0.07); top: -150px; right: -150px; pointer-events: none;
         }
-        .hero-bg::after {
+        .hero-right::after {
             content: '';
-            position: absolute;
-            width: 400px; height: 400px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.04);
-            bottom: -100px; left: -100px;
-            pointer-events: none;
+            position: absolute; width: 300px; height: 300px; border-radius: 50%;
+            background: rgba(255,255,255,0.05); bottom: -80px; left: -80px; pointer-events: none;
         }
+        @media (max-width: 1023px) {
+            .hero-wrap { flex-direction: column; }
+            .hero-left { padding: 6rem 1.5rem 2rem; }
+            .hero-right { width: 100%; padding: 2.5rem 1.5rem 3rem; }
+        }
+
+        /* ── Typewriter ── */
+        .typewriter { border-right: 3px solid #f97316; white-space: nowrap; overflow: hidden; animation: blink 0.75s step-end infinite; }
+        @keyframes blink { 0%,100% { border-color: #f97316; } 50% { border-color: transparent; } }
+
+        /* ── Floating cards on right ── */
+        @keyframes floatA { 0%,100% { transform: translateY(0px) rotate(-1deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
+        @keyframes floatB { 0%,100% { transform: translateY(0px) rotate(1deg); } 50% { transform: translateY(-8px) rotate(-1deg); } }
+        @keyframes floatC { 0%,100% { transform: translateY(0px); } 50% { transform: translateY(-14px); } }
+        .float-a { animation: floatA 4s ease-in-out infinite; }
+        .float-b { animation: floatB 5s ease-in-out infinite 0.5s; }
+        .float-c { animation: floatC 3.5s ease-in-out infinite 1s; }
+
+        /* ── Marquee ── */
+        .marquee-track { display: flex; gap: 2rem; animation: marquee 22s linear infinite; white-space: nowrap; }
+        @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        .marquee-wrap { overflow: hidden; }
 
         /* ── Card hover ── */
         .card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.12); }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.10); }
 
         /* ── Scroll reveal ── */
         .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -66,13 +84,8 @@
         .reveal-l.up { opacity: 1; transform: translateX(0); }
         .reveal-r { opacity: 0; transform: translateX(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
         .reveal-r.up { opacity: 1; transform: translateX(0); }
-
-        .d1 { transition-delay: 0.05s; }
-        .d2 { transition-delay: 0.15s; }
-        .d3 { transition-delay: 0.25s; }
-        .d4 { transition-delay: 0.35s; }
-        .d5 { transition-delay: 0.45s; }
-        .d6 { transition-delay: 0.55s; }
+        .d1{transition-delay:.05s} .d2{transition-delay:.15s} .d3{transition-delay:.25s}
+        .d4{transition-delay:.35s} .d5{transition-delay:.45s} .d6{transition-delay:.55s}
 
         /* ── Counter ── */
         .counter { display: inline-block; }
@@ -82,22 +95,32 @@
         .ul-hover::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px; background:#f97316; transition: width 0.3s ease; }
         .ul-hover:hover::after { width:100%; }
 
-        /* ── Loading ── */
-        .loader { position: fixed; inset: 0; background: #f97316; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; transition: opacity 0.4s ease; }
-        .loader-ring { width: 48px; height: 48px; border: 3px solid rgba(255,255,255,0.3); border-top: 3px solid #fff; border-radius: 50%; animation: spin 0.8s linear infinite; }
+        /* ── Loader ── */
+        .loader { position: fixed; inset: 0; background: #fff; z-index: 9999; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; transition: opacity 0.4s ease; }
+        .loader-bar { width: 160px; height: 3px; background: #e2e8f0; border-radius: 9px; overflow: hidden; }
+        .loader-fill { height: 100%; background: #f97316; border-radius: 9px; animation: fill 1s ease forwards; }
+        @keyframes fill { from { width: 0 } to { width: 100% } }
         @keyframes spin { to { transform: rotate(360deg); } }
 
         /* ── Pulse dot ── */
-        @keyframes pulse-dot { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
-        .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+        @keyframes pulse-dot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.5; transform:scale(0.7); } }
+        .pulse-dot { animation: pulse-dot 1.5s ease-in-out infinite; }
+
+        /* ── Ticker ── */
+        @keyframes ticker { 0%,100% { transform: translateY(0); opacity:1; } 45% { transform: translateY(0); opacity:1; } 55% { transform: translateY(-100%); opacity:0; } 56% { transform: translateY(100%); opacity:0; } 65% { transform: translateY(0); opacity:1; } }
+
+        /* ── Section divider wave ── */
+        .wave-divider { line-height: 0; }
+        .wave-divider svg { display: block; }
     </style>
 </head>
 <body class="bg-white text-slate-800 overflow-x-hidden">
 
     <!-- Loading -->
     <div id="loader" class="loader">
-        <div class="loader-ring"></div>
-        <p class="text-white text-sm font-medium tracking-widest uppercase">PDKA</p>
+        <img src="logo.png" alt="PDKA" class="h-10 w-auto mb-4 opacity-80">
+        <div class="loader-bar"><div class="loader-fill"></div></div>
+        <p class="text-slate-400 text-xs font-medium tracking-widest uppercase mt-2">Loading...</p>
     </div>
 
     <!-- Nav -->
@@ -129,51 +152,135 @@
     </nav>
 
     <!-- ── HERO ── -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-16">
-        <div class="max-w-7xl mx-auto px-6 lg:px-8 w-full py-20 lg:py-28">
-            <div class="max-w-3xl">
-                <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25 rounded-full px-4 py-1.5 mb-8">
-                    <span class="pulse-dot w-2 h-2 rounded-full bg-white inline-block"></span>
-                    <span class="text-white text-xs font-semibold tracking-widest uppercase">Chartered Accountants · Est. 1997</span>
+    <section id="home" class="hero-wrap pt-16 lg:pt-0">
+        <!-- Left: white -->
+        <div class="hero-left">
+            <div class="max-w-xl">
+                <div class="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-1.5 mb-7">
+                    <span class="pulse-dot w-2 h-2 rounded-full bg-[#f97316] inline-block"></span>
+                    <span class="text-[#f97316] text-xs font-semibold tracking-widest uppercase">Chartered Accountants · Est. 1997</span>
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.1] mb-6">
-                    Empowering<br>Businesses with<br>
-                    <span class="text-white/80">Financial Excellence</span>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-3">
+                    Empowering<br>Businesses with
                 </h1>
-                <p class="text-white/80 text-lg lg:text-xl max-w-xl mb-10 leading-relaxed">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#f97316] leading-[1.1] mb-6">
+                    <span id="typewriter" class="typewriter"></span>
+                </h1>
+                <p class="text-slate-500 text-lg max-w-md mb-8 leading-relaxed">
                     Premier Chartered Accountancy firm delivering strategic financial solutions for ambitious organisations worldwide.
                 </p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#services" class="inline-flex items-center gap-2 bg-white text-[#f97316] font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-orange-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+                <div class="flex flex-wrap gap-3 mb-10">
+                    <a href="#services" class="inline-flex items-center gap-2 bg-[#f97316] text-white font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-[#ea6d0e] hover:shadow-lg shadow-orange-200 transition-all duration-300 hover:-translate-y-0.5">
                         <i class="fas fa-rocket text-xs"></i> Explore Services
                     </a>
-                    <a href="#contact" class="inline-flex items-center gap-2 border-2 border-white/70 text-white font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-white/10 transition-all duration-300">
+                    <a href="#contact" class="inline-flex items-center gap-2 border-2 border-slate-200 text-slate-700 font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:border-[#f97316] hover:text-[#f97316] transition-all duration-300">
                         <i class="fas fa-phone text-xs"></i> Contact Us
                     </a>
                 </div>
-            </div>
-
-            <!-- Stats bar -->
-            <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/20 rounded-2xl overflow-hidden mt-16 lg:mt-20">
-                <div class="bg-white/10 backdrop-blur-sm px-8 py-6 text-center">
-                    <div class="text-3xl lg:text-4xl font-bold text-white mb-1"><span class="counter">28</span>+</div>
-                    <div class="text-white/70 text-sm font-medium uppercase tracking-wide">Years Experience</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm px-8 py-6 text-center">
-                    <div class="text-3xl lg:text-4xl font-bold text-white mb-1"><span class="counter">3000</span>+</div>
-                    <div class="text-white/70 text-sm font-medium uppercase tracking-wide">Clients Served</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm px-8 py-6 text-center">
-                    <div class="text-3xl lg:text-4xl font-bold text-white mb-1"><span class="counter">30</span>+</div>
-                    <div class="text-white/70 text-sm font-medium uppercase tracking-wide">Expert Team</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm px-8 py-6 text-center">
-                    <div class="text-3xl lg:text-4xl font-bold text-white mb-1"><span class="counter">100</span>%</div>
-                    <div class="text-white/70 text-sm font-medium uppercase tracking-wide">Client Focus</div>
+                <!-- Stats row -->
+                <div class="grid grid-cols-4 gap-4 pt-8 border-t border-slate-100">
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900"><span class="counter">28</span>+</div>
+                        <div class="text-slate-400 text-xs mt-0.5">Years Exp.</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900"><span class="counter">3000</span>+</div>
+                        <div class="text-slate-400 text-xs mt-0.5">Clients</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900"><span class="counter">30</span>+</div>
+                        <div class="text-slate-400 text-xs mt-0.5">Experts</div>
+                    </div>
+                    <div>
+                        <div class="text-2xl font-bold text-slate-900">100%</div>
+                        <div class="text-slate-400 text-xs mt-0.5">Focused</div>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Right: orange with floating cards -->
+        <div class="hero-right">
+            <!-- Floating stat cards -->
+            <div class="float-a bg-white rounded-2xl shadow-xl px-6 py-4 mb-4 flex items-center gap-4 w-64 z-10">
+                <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-chart-line text-[#f97316]"></i>
+                </div>
+                <div>
+                    <div class="text-xs text-slate-400 font-medium">Revenue Growth</div>
+                    <div class="text-slate-900 font-bold">+32% YoY</div>
+                </div>
+            </div>
+            <div class="float-b bg-white rounded-2xl shadow-xl px-6 py-4 mb-4 flex items-center gap-4 w-64 z-10">
+                <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-shield-alt text-[#f97316]"></i>
+                </div>
+                <div>
+                    <div class="text-xs text-slate-400 font-medium">Compliance Rate</div>
+                    <div class="text-slate-900 font-bold">100% ICAI</div>
+                </div>
+            </div>
+            <div class="float-c bg-white rounded-2xl shadow-xl px-6 py-4 flex items-center gap-4 w-64 z-10">
+                <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
+                    <i class="fas fa-globe text-[#f97316]"></i>
+                </div>
+                <div>
+                    <div class="text-xs text-slate-400 font-medium">Global Clients</div>
+                    <div class="text-slate-900 font-bold">9+ Countries</div>
+                </div>
+            </div>
+            <!-- Trusted by label -->
+            <p class="text-white/60 text-xs font-semibold uppercase tracking-widest mt-8 z-10">Trusted by businesses across</p>
+            <div class="flex flex-wrap gap-2 justify-center mt-3 z-10">
+                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇮🇳 India</span>
+                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇺🇸 USA</span>
+                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇬🇧 UK</span>
+                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇦🇪 Dubai</span>
+                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇸🇬 Singapore</span>
+                <span class="bg-white/15 text-white text-xs px-2.5 py-1 rounded-full">🇦🇺 Australia</span>
+            </div>
+        </div>
     </section>
+
+    <!-- ── MARQUEE ── -->
+    <div class="bg-[#f97316] py-3 overflow-hidden">
+        <div class="marquee-wrap">
+            <div class="marquee-track">
+                <span class="text-white/80 text-sm font-medium">✦ Audit & Assurance</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Virtual CFO</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Tax Advisory</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Business Consulting</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Compliance & Regulatory</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Risk Management</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ IS Audit (CISA)</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Foreign Company Entry</span>
+                <span class="text-white/40">·</span>
+                <!-- duplicate for seamless loop -->
+                <span class="text-white/80 text-sm font-medium">✦ Audit & Assurance</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Virtual CFO</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Tax Advisory</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Business Consulting</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Compliance & Regulatory</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Risk Management</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ IS Audit (CISA)</span>
+                <span class="text-white/40">·</span>
+                <span class="text-white/80 text-sm font-medium">✦ Foreign Company Entry</span>
+            </div>
+        </div>
+    </div>
 
     <!-- ── ABOUT ── -->
     <section id="about" class="py-20 bg-white">
@@ -408,11 +515,12 @@
     </section>
 
     <!-- ── CTA ── -->
-    <section class="py-16 bg-[#f97316]">
+    <section class="py-16 bg-white border-t border-slate-100">
         <div class="max-w-4xl mx-auto px-6 text-center reveal">
-            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Ready to Transform Your Financial Future?</h2>
-            <p class="text-white/80 mb-8 text-lg">Let PDKA help you achieve your financial goals with expert guidance.</p>
-            <a href="#contact" class="inline-block bg-white text-[#f97316] font-bold px-8 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-orange-50 hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">Schedule Consultation</a>
+            <span class="text-[#f97316] text-xs font-bold uppercase tracking-widest">Take the Next Step</span>
+            <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mt-3 mb-4">Ready to Transform Your Financial Future?</h2>
+            <p class="text-slate-500 mb-8 text-lg max-w-xl mx-auto">Let PDKA help you achieve your financial goals with expert guidance and strategic solutions.</p>
+            <a href="#contact" class="inline-block bg-[#f97316] text-white font-bold px-8 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-[#ea6d0e] hover:shadow-lg shadow-orange-100 transition-all duration-300 hover:-translate-y-0.5">Schedule Consultation</a>
         </div>
     </section>
 
@@ -545,8 +653,27 @@
             setTimeout(() => {
                 loader.style.opacity = '0';
                 setTimeout(() => loader.style.display = 'none', 400);
-            }, 700);
+            }, 1100);
         });
+
+        // Typewriter
+        const phrases = ['Financial Excellence', 'Tax Advisory', 'Audit & Assurance', 'Business Growth', 'CFO Services'];
+        let pi = 0, ci = 0, deleting = false;
+        const tw = document.getElementById('typewriter');
+        function type() {
+            const phrase = phrases[pi];
+            if (!deleting) {
+                tw.textContent = phrase.substring(0, ci + 1);
+                ci++;
+                if (ci === phrase.length) { deleting = true; setTimeout(type, 1800); return; }
+            } else {
+                tw.textContent = phrase.substring(0, ci - 1);
+                ci--;
+                if (ci === 0) { deleting = false; pi = (pi + 1) % phrases.length; }
+            }
+            setTimeout(type, deleting ? 60 : 90);
+        }
+        setTimeout(type, 600);
 
         // Mobile menu
         document.getElementById('mobileMenuBtn').addEventListener('click', () => {
