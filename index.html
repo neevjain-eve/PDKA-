@@ -23,7 +23,7 @@
     <style>
         * { font-family: 'Inter', sans-serif; }
 
-        /* navbar styles moved to inline */
+        
 
         /* ── Hero: white left panel, orange right panel ── */
         .hero-wrap { background: #fff; min-height: 100vh; display: flex; align-items: stretch; }
@@ -120,45 +120,35 @@
         <p class="text-slate-400 text-xs font-medium tracking-widest uppercase mt-2">Loading...</p>
     </div>
 
-    <!-- HEADER: single fixed bar, 100% inline styles so nothing can override -->
-    <header style="position:fixed;top:0;left:0;right:0;height:64px;z-index:99999;display:flex;align-items:center;justify-content:space-between;padding:0 24px;pointer-events:none;">
-
-        <!-- Logo: left -->
-        <div style="pointer-events:auto;">
-            <a href="#home"><img src="logo.png" alt="PDKA" style="height:44px;width:auto;display:block;"></a>
+    <!-- Nav -->
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300" style="background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);box-shadow:0 2px 20px rgba(0,0,0,0.08);">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 lg:h-20">
+                <img src="logo.png" alt="PDKA" class="h-12 w-auto">
+                <div class="hidden lg:flex items-center gap-10">
+                    <a href="#home"     class="nav-link ul-hover text-slate-700 hover:text-[#f97316] font-medium text-sm transition-colors">Home</a>
+                    <a href="#about"    class="nav-link ul-hover text-slate-700 hover:text-[#f97316] font-medium text-sm transition-colors">About</a>
+                    <a href="#services" class="nav-link ul-hover text-slate-700 hover:text-[#f97316] font-medium text-sm transition-colors">Services</a>
+                    <a href="#insights" class="nav-link ul-hover text-slate-700 hover:text-[#f97316] font-medium text-sm transition-colors">Insights</a>
+                    <a href="#contact"  class="nav-link ul-hover text-slate-700 hover:text-[#f97316] font-medium text-sm transition-colors">Contact</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="#contact" class="hidden lg:block bg-white text-[#f97316] px-5 py-2.5 rounded-full text-sm font-semibold border border-orange-200 hover:bg-orange-50 transition-all duration-300">Get Started</a>
+                    <button id="mobileMenuBtn" class="lg:hidden text-slate-700 p-2"><i class="fas fa-bars text-xl"></i></button>
+                </div>
+            </div>
+            <div id="mobileMenu" class="lg:hidden hidden pb-6 pt-2 space-y-1 border-t border-slate-100">
+                <a href="#home"     class="block px-4 py-2.5 text-slate-700 font-medium rounded-lg hover:bg-orange-50 hover:text-[#f97316] transition-colors">Home</a>
+                <a href="#about"    class="block px-4 py-2.5 text-slate-700 font-medium rounded-lg hover:bg-orange-50 hover:text-[#f97316] transition-colors">About</a>
+                <a href="#services" class="block px-4 py-2.5 text-slate-700 font-medium rounded-lg hover:bg-orange-50 hover:text-[#f97316] transition-colors">Services</a>
+                <a href="#insights" class="block px-4 py-2.5 text-slate-700 font-medium rounded-lg hover:bg-orange-50 hover:text-[#f97316] transition-colors">Insights</a>
+                <a href="#contact"  class="block px-4 py-2.5 text-slate-700 font-medium rounded-lg hover:bg-orange-50 hover:text-[#f97316] transition-colors">Contact</a>
+            </div>
         </div>
-
-        <!-- Pill: center -->
-        <nav style="pointer-events:auto;background:rgba(255,255,255,0.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border:1px solid rgba(0,0,0,0.08);border-radius:9999px;padding:0 28px;height:44px;display:flex;align-items:center;gap:32px;box-shadow:0 4px 20px rgba(0,0,0,0.08);">
-            <a href="#home"     style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Home</a>
-            <a href="#about"    style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">About</a>
-            <a href="#services" style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Services</a>
-            <a href="#insights" style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Insights</a>
-            <a href="#contact"  style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Contact</a>
-        </nav>
-
-        <!-- Get Started: right -->
-        <div style="pointer-events:auto;">
-            <a href="#contact" style="background:#ffffff;color:#f97316;padding:10px 20px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.06);" onmouseover="this.style.background='#fff7ed'" onmouseout="this.style.background='#ffffff'">Get Started</a>
-        </div>
-
-    </header>
-
-    <!-- Mobile menu button -->
-    <button id="mobileMenuBtn" style="display:none;position:fixed;top:14px;right:20px;z-index:99999;background:white;border:none;border-radius:50%;width:40px;height:40px;box-shadow:0 2px 12px rgba(0,0,0,0.12);cursor:pointer;font-size:16px;color:#475569;">
-        <i class="fas fa-bars"></i>
-    </button>
-    <!-- Mobile dropdown -->
-    <div id="mobileMenu" style="display:none;position:fixed;top:64px;left:16px;right:16px;z-index:99998;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-radius:16px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.12);padding:8px;">
-        <a href="#home"     style="display:block;padding:12px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Home</a>
-        <a href="#about"    style="display:block;padding:12px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">About</a>
-        <a href="#services" style="display:block;padding:12px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Services</a>
-        <a href="#insights" style="display:block;padding:12px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Insights</a>
-        <a href="#contact"  style="display:block;padding:12px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Contact</a>
-    </div>
+    </nav>
 
     <!-- ── HERO ── -->
-    <section id="home" class="hero-wrap" style="padding-top:64px;">
+    <section id="home" class="hero-wrap" style="padding-top:80px;">
         <!-- Left: white -->
         <div class="hero-left">
             <div class="max-w-xl">
@@ -662,14 +652,6 @@
             }, 1100);
         });
 
-        // FORCE HEADER FIXED — re-apply every frame in case any CSS overrides it
-        const hdr = document.querySelector('header');
-        function lockHeader() {
-            hdr.style.cssText = "position:fixed!important;top:0!important;left:0!important;right:0!important;height:64px!important;z-index:2147483647!important;display:flex!important;align-items:center!important;justify-content:space-between!important;padding:0 24px!important;pointer-events:none!important;";
-            requestAnimationFrame(lockHeader);
-        }
-        lockHeader();
-
         // Typewriter
         const phrases = ['Financial Excellence', 'Tax Advisory', 'Audit & Assurance', 'Business Growth', 'CFO Services'];
         let pi = 0, ci = 0, deleting = false;
@@ -690,19 +672,8 @@
         setTimeout(type, 600);
 
         // Mobile menu
-        // Show/hide mobile menu button on small screens
-        function checkMobile() {
-            const btn = document.getElementById('mobileMenuBtn');
-            btn.style.display = window.innerWidth < 1024 ? 'flex' : 'none';
-            btn.style.alignItems = 'center';
-            btn.style.justifyContent = 'center';
-        }
-        checkMobile();
-        window.addEventListener('resize', checkMobile);
-
         document.getElementById('mobileMenuBtn').addEventListener('click', () => {
-            const m = document.getElementById('mobileMenu');
-            m.style.display = m.style.display === 'block' ? 'none' : 'block';
+            document.getElementById('mobileMenu').classList.toggle('hidden');
         });
 
         // Navbar scroll
