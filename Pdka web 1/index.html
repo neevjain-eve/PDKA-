@@ -116,56 +116,43 @@ content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO &
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 glass border-b border-white/20">
+    <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300 bg-[#f8f9fa] border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center py-3 sm:py-4 lg:py-6 gap-3">
+            <div class="relative flex justify-between items-center py-4 gap-3">
                 <!-- Logo -->
-                <div class="flex items-center">
+                <div class="flex items-center z-20">
                     <img src="logo.png" alt="PDKA logo" class="h-10 w-auto max-w-[180px] object-contain sm:h-14 sm:max-w-none">
                 </div>
 
                 <!-- Desktop Menu -->
-                <div class="hidden lg:flex items-center space-x-12">
-                    <a href="#home" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
-                        <span>Home</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-600 lg:bg-blue-700 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#about" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
-                        <span>About</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold lg:bg-navy-900 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#services" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
-                        <span>Services</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold lg:bg-navy-900 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#insights" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
-                        <span>Insights</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold lg:bg-navy-900 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#contact" class="nav-link text-white lg:text-slate-700 hover:text-slate-600 lg:hover:text-blue-700 font-medium transition-all duration-300 py-2 px-3 relative group">
-                        <span>Contact</span>
-                        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold lg:bg-navy-900 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+                <div class="hidden lg:flex absolute inset-0 items-center justify-center pointer-events-none">
+                    <div class="bg-white rounded-full px-8 py-3 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07)] flex space-x-8 pointer-events-auto">
+                        <a href="#home" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Home</a>
+                        <a href="#about" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">About</a>
+                        <a href="#services" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Services</a>
+                        <a href="#insights" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Insights</a>
+                        <a href="#contact" class="text-slate-600 hover:text-slate-900 font-medium transition-colors">Contact</a>
+                    </div>
                 </div>
 
                 <!-- CTA & Mobile Menu -->
-                <div class="flex items-center space-x-4">
-                    <a href="#contact" class="hidden lg:block bg-blue-600 text-white px-8 py-3 rounded-full font-semibold text-sm uppercase tracking-wide hover:bg-blue-700 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <div class="flex items-center space-x-4 z-20">
+                    <a href="#contact" class="hidden lg:block bg-white text-orange-500 px-6 py-2.5 rounded-full font-semibold hover:shadow-md transition-all duration-300 border border-gray-100">
                         Get Started
                     </a>
-                    <button id="mobileMenuBtn" class="lg:hidden text-white p-2 flex-shrink-0">
+                    <button id="mobileMenuBtn" class="lg:hidden text-slate-800 p-2 flex-shrink-0">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
             </div>
 
             <!-- Mobile Menu -->
-            <div id="mobileMenu" class="lg:hidden hidden pb-8 pt-4 space-y-4 border-t border-white/20">
-                <a href="#home" class="block px-4 py-3 text-white hover:text-slate-200 font-medium transition-colors">Home</a>
-                <a href="#about" class="block px-4 py-3 text-white hover:text-slate-200 font-medium transition-colors">About</a>
-                <a href="#services" class="block px-4 py-3 text-white hover:text-slate-200 font-medium transition-colors">Services</a>
-                <a href="#insights" class="block px-4 py-3 text-white hover:text-slate-200 font-medium transition-colors">Insights</a>
-                <a href="#contact" class="block px-4 py-3 text-white hover:text-slate-200 font-medium transition-colors">Contact</a>
+            <div id="mobileMenu" class="lg:hidden hidden pb-6 pt-4 space-y-2 border-t border-gray-200">
+                <a href="#home" class="block px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors">Home</a>
+                <a href="#about" class="block px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors">About</a>
+                <a href="#services" class="block px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors">Services</a>
+                <a href="#insights" class="block px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors">Insights</a>
+                <a href="#contact" class="block px-4 py-2 text-slate-600 hover:text-slate-900 font-medium transition-colors">Contact</a>
             </div>
         </div>
     </nav>
