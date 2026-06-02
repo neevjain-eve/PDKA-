@@ -75,9 +75,9 @@
         /* ── Scroll reveal ── */
         .reveal { opacity: 0; transition: opacity 0.7s ease; }
         .reveal.up { opacity: 1; }
-        .reveal-l { opacity: 0; transition: opacity 0.7s ease; }
+        .reveal-l { opacity: 0; transition: opacity 0.7s ease 0.1s; }
         .reveal-l.up { opacity: 1; }
-        .reveal-r { opacity: 0; transition: opacity 0.7s ease; }
+        .reveal-r { opacity: 0; transition: opacity 0.7s ease 0.1s; }
         .reveal-r.up { opacity: 1; }
         .d1{transition-delay:.05s} .d2{transition-delay:.15s} .d3{transition-delay:.25s}
         .d4{transition-delay:.35s} .d5{transition-delay:.45s} .d6{transition-delay:.55s}
@@ -120,51 +120,33 @@
         <p class="text-slate-400 text-xs font-medium tracking-widest uppercase mt-2">Loading...</p>
     </div>
 
-    <!-- Nav: iOS floating pill, truly fixed because no transforms on ancestors -->
-    <nav id="navbar" style="
-        position: fixed;
-        top: 16px;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 9999;
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        border: 1px solid rgba(0,0,0,0.09);
-        border-radius: 9999px;
-        box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-        padding: 0 28px;
-        height: 52px;
-        display: flex;
-        align-items: center;
-        gap: 36px;
-        white-space: nowrap;
-    ">
+    <!-- Logo: independently fixed top-left -->
+    <a href="#home" style="position:fixed;top:20px;left:28px;z-index:9999;display:flex;align-items:center;text-decoration:none;">
+        <img src="logo.png" alt="PDKA" style="height:40px;width:auto;display:block;">
+    </a>
+
+    <!-- Pill: independently fixed center-top -->
+    <div style="position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(255,255,255,0.95);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(0,0,0,0.09);border-radius:9999px;box-shadow:0 4px 20px rgba(0,0,0,0.10);padding:0 28px;height:52px;display:flex;align-items:center;gap:32px;white-space:nowrap;">
         <a href="#home"     style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Home</a>
         <a href="#about"    style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">About</a>
         <a href="#services" style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Services</a>
         <a href="#insights" style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Insights</a>
         <a href="#contact"  style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Contact</a>
-    </nav>
+    </div>
 
-    <!-- Logo fixed top-left -->
-    <a href="#home" style="position:fixed;top:16px;left:24px;z-index:9999;height:52px;display:flex;align-items:center;">
-        <img src="logo.png" alt="PDKA" style="height:42px;width:auto;">
-    </a>
+    <!-- Get Started: independently fixed top-right -->
+    <a href="#contact" id="nav-cta" style="position:fixed;top:16px;right:28px;z-index:9999;display:flex;align-items:center;background:#ffffff;color:#f97316;padding:0 20px;height:52px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);" onmouseover="this.style.background='#fff7ed'" onmouseout="this.style.background='#ffffff'">Get Started</a>
 
-    <!-- Get Started fixed top-right -->
-    <a href="#contact" style="position:fixed;top:16px;right:24px;z-index:9999;height:52px;display:flex;align-items:center;background:#ffffff;color:#f97316;padding:0 20px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);" onmouseover="this.style.background='#fff7ed'" onmouseout="this.style.background='#ffffff'">Get Started</a>
-
-    <!-- Mobile hamburger -->
-    <button id="mobileMenuBtn" style="display:none;position:fixed;top:18px;right:24px;z-index:9999;background:white;border:1px solid rgba(0,0,0,0.09);border-radius:50%;width:44px;height:44px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;font-size:16px;color:#475569;align-items:center;justify-content:center;">
+    <!-- Mobile hamburger: independently fixed top-right (hidden on desktop) -->
+    <button id="mobileMenuBtn" style="display:none;position:fixed;top:18px;right:28px;z-index:9999;background:white;border:1px solid rgba(0,0,0,0.09);border-radius:50%;width:46px;height:46px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;font-size:16px;color:#475569;align-items:center;justify-content:center;">
         <i class="fas fa-bars"></i>
     </button>
-    <div id="mobileMenu" style="display:none;position:fixed;top:72px;left:16px;right:16px;z-index:9998;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-radius:16px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.12);padding:8px;">
-        <a href="#home"     style="display:block;padding:11px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Home</a>
-        <a href="#about"    style="display:block;padding:11px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">About</a>
-        <a href="#services" style="display:block;padding:11px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Services</a>
-        <a href="#insights" style="display:block;padding:11px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Insights</a>
-        <a href="#contact"  style="display:block;padding:11px 16px;color:#475569;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Contact</a>
+    <div id="mobileMenu" style="display:none;position:fixed;top:74px;left:16px;right:16px;z-index:9998;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-radius:16px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.12);padding:8px;">
+        <a href="#home"     style="display:block;padding:11px 16px;color:#334155;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Home</a>
+        <a href="#about"    style="display:block;padding:11px 16px;color:#334155;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">About</a>
+        <a href="#services" style="display:block;padding:11px 16px;color:#334155;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Services</a>
+        <a href="#insights" style="display:block;padding:11px 16px;color:#334155;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Insights</a>
+        <a href="#contact"  style="display:block;padding:11px 16px;color:#334155;font-weight:500;text-decoration:none;border-radius:10px;font-size:14px;">Contact</a>
     </div>
 
     <!-- ── HERO ── -->
@@ -694,15 +676,9 @@
         // Mobile menu
         // Mobile nav
         function checkMobile() {
-            const btn = document.getElementById('mobileMenuBtn');
-            const cta = document.querySelector('a[href="#contact"][style*="position:fixed"]');
-            if (window.innerWidth < 1024) {
-                btn.style.display = 'flex';
-                if (cta) cta.style.display = 'none';
-            } else {
-                btn.style.display = 'none';
-                if (cta) cta.style.display = 'flex';
-            }
+            const isMobile = window.innerWidth < 1024;
+            document.getElementById('mobileMenuBtn').style.display = isMobile ? 'flex' : 'none';
+            document.getElementById('nav-cta').style.display = isMobile ? 'none' : 'flex';
         }
         checkMobile();
         window.addEventListener('resize', checkMobile);
