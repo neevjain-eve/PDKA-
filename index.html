@@ -107,6 +107,10 @@
         /* ── Section divider wave ── */
         .wave-divider { line-height: 0; }
         .wave-divider svg { display: block; }
+
+        /* Nav auto-hide */
+        .nav-item { transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.35s ease; }
+        .nav-hidden { transform: translateY(-90px) !important; opacity: 0 !important; pointer-events: none !important; }
     </style>
 
     
@@ -121,12 +125,12 @@
     </div>
 
     <!-- Logo: independently fixed top-left -->
-    <a href="#home" style="position:fixed;top:20px;left:28px;z-index:9999;display:flex;align-items:center;text-decoration:none;">
+    <a href="#home" data-nav class="nav-item" style="position:fixed;top:20px;left:28px;z-index:9999;display:flex;align-items:center;text-decoration:none;">
         <img src="logo.png" alt="PDKA" style="height:40px;width:auto;display:block;">
     </a>
 
     <!-- Pill: independently fixed center-top -->
-    <div style="position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(255,255,255,0.95);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(0,0,0,0.09);border-radius:9999px;box-shadow:0 4px 20px rgba(0,0,0,0.10);padding:0 28px;height:52px;display:flex;align-items:center;gap:32px;white-space:nowrap;">
+    <div data-nav class="nav-item" style="position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(255,255,255,0.95);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(0,0,0,0.09);border-radius:9999px;box-shadow:0 4px 20px rgba(0,0,0,0.10);padding:0 28px;height:52px;display:flex;align-items:center;gap:32px;white-space:nowrap;">
         <a href="#home"     style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Home</a>
         <a href="#about"    style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">About</a>
         <a href="#services" style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Services</a>
@@ -135,10 +139,10 @@
     </div>
 
     <!-- Get Started: independently fixed top-right -->
-    <a href="#contact" id="nav-cta" style="position:fixed;top:16px;right:28px;z-index:9999;display:flex;align-items:center;background:#ffffff;color:#f97316;padding:0 20px;height:52px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);" onmouseover="this.style.background='#fff7ed'" onmouseout="this.style.background='#ffffff'">Get Started</a>
+    <a href="#contact" id="nav-cta" data-nav class="nav-item" style="position:fixed;top:16px;right:28px;z-index:9999;display:flex;align-items:center;background:#ffffff;color:#f97316;padding:0 20px;height:52px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.10);border:1px solid rgba(0,0,0,0.07);" onmouseover="this.style.background='#fff7ed'" onmouseout="this.style.background='#ffffff'">Get Started</a>
 
     <!-- Mobile hamburger: independently fixed top-right (hidden on desktop) -->
-    <button id="mobileMenuBtn" style="display:none;position:fixed;top:18px;right:28px;z-index:9999;background:white;border:1px solid rgba(0,0,0,0.09);border-radius:50%;width:46px;height:46px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;font-size:16px;color:#475569;align-items:center;justify-content:center;">
+    <button id="mobileMenuBtn" data-nav class="nav-item" style="display:none;position:fixed;top:18px;right:28px;z-index:9999;background:white;border:1px solid rgba(0,0,0,0.09);border-radius:50%;width:46px;height:46px;box-shadow:0 2px 12px rgba(0,0,0,0.10);cursor:pointer;font-size:16px;color:#475569;align-items:center;justify-content:center;">
         <i class="fas fa-bars"></i>
     </button>
     <div id="mobileMenu" style="display:none;position:fixed;top:74px;left:16px;right:16px;z-index:9998;background:rgba(255,255,255,0.98);backdrop-filter:blur(20px);border-radius:16px;border:1px solid rgba(0,0,0,0.08);box-shadow:0 8px 32px rgba(0,0,0,0.12);padding:8px;">
@@ -689,6 +693,31 @@
 
         // Navbar scroll
 
+
+        // ── Hide nav on scroll down, show on scroll up or mouse near top ──
+        const navItems = document.querySelectorAll('[data-nav]');
+        let lastY = 0;
+        let hideTimer = null;
+
+        function showNav() {
+            navItems.forEach(el => el.classList.remove('nav-hidden'));
+        }
+        function hideNav() {
+            navItems.forEach(el => el.classList.add('nav-hidden'));
+        }
+
+        window.addEventListener('scroll', () => {
+            const y = window.scrollY;
+            if (y <= 10) { showNav(); }
+            else if (y > lastY + 5) { hideNav(); }   // scrolling down
+            else if (y < lastY - 5) { showNav(); }   // scrolling up
+            lastY = y;
+        }, { passive: true });
+
+        // Show when mouse moves to top 80px of screen
+        document.addEventListener('mousemove', e => {
+            if (e.clientY < 80) showNav();
+        });
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(a => {
