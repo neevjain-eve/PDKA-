@@ -22,6 +22,8 @@
     </script>
     <style>
         * { font-family: 'Inter', sans-serif; }
+        html, body { -webkit-overflow-scrolling: touch; }
+        img { max-width: 100%; }
 
         
 
@@ -47,8 +49,13 @@
         }
         @media (max-width: 1023px) {
             .hero-wrap { flex-direction: column; }
-            .hero-left { padding: 6rem 1.5rem 2rem; }
-            .hero-right { width: 100%; padding: 2.5rem 1.5rem 3rem; }
+            .hero-left { padding: 5rem 1.25rem 2rem; }
+            .hero-right { width: 100%; padding: 2rem 1.25rem 3rem; }
+            .float-a, .float-b, .float-c { width: 100% !important; max-width: 340px; }
+        }
+        @media (max-width: 640px) {
+            .hero-left { padding: 5rem 1rem 1.5rem; }
+            .hero-right { padding: 1.5rem 1rem 2.5rem; }
         }
 
         /* ── Typewriter ── */
@@ -131,7 +138,7 @@
     </a>
 
     <!-- Pill: independently fixed center-top -->
-    <div data-nav class="nav-item" style="position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(255,255,255,0.95);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(0,0,0,0.09);border-radius:9999px;box-shadow:0 4px 20px rgba(0,0,0,0.10);padding:0 28px;height:52px;display:flex;align-items:center;gap:32px;white-space:nowrap;">
+    <div data-nav class="nav-item hidden lg:flex" style="position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:9999;background:rgba(255,255,255,0.95);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border:1px solid rgba(0,0,0,0.09);border-radius:9999px;box-shadow:0 4px 20px rgba(0,0,0,0.10);padding:0 28px;height:52px;display:flex;align-items:center;gap:32px;white-space:nowrap;">
         <a href="#home"     style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Home</a>
         <a href="#about"    style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">About</a>
         <a href="#services" style="color:#475569;font-size:14px;font-weight:500;text-decoration:none;" onmouseover="this.style.color='#f97316'" onmouseout="this.style.color='#475569'">Services</a>
@@ -161,18 +168,18 @@
             <div class="max-w-xl">
                 <div class="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-1.5 mb-7">
                     <span class="pulse-dot w-2 h-2 rounded-full bg-[#f97316] inline-block"></span>
-                    <span class="text-[#f97316] text-xs font-semibold tracking-widest uppercase">Chartered Accountants · Est. 1998</span>
+                    <span class="text-[#f97316] text-xs font-semibold tracking-wide uppercase">Chartered Accountants · Est. 1998</span>
                 </div>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-3">
+                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-3">
                     Empowering<br>Businesses with
                 </h1>
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#f97316] leading-[1.1] mb-6">
+                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#f97316] leading-[1.1] mb-6">
                     <span id="typewriter" class="typewriter"></span>
                 </h1>
                 <p class="text-slate-500 text-lg max-w-md mb-8 leading-relaxed">
                     A professional firm of Chartered Accountants committed to its values, quality policy and ICAI Standards.
                 </p>
-                <div class="flex flex-wrap gap-3 mb-10">
+                <div class="flex flex-col sm:flex-row gap-3 mb-8">
                     <a href="#services" class="inline-flex items-center gap-2 bg-[#f97316] text-white font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-[#ea6d0e] hover:shadow-lg shadow-orange-200 transition-all duration-300 hover:-translate-y-0.5">
                         <i class="fas fa-rocket text-xs"></i> Explore Services
                     </a>
@@ -194,7 +201,7 @@
                             <!-- Big centred number with fade in/out -->
                             <div style="animation:breathe 4s ease-in-out infinite;">
                                 <div class="flex items-end justify-center gap-1 mb-3">
-                                    <span class="font-black text-slate-900 leading-none" style="font-size:5.5rem;line-height:1;letter-spacing:-4px;"><span class="counter">28</span></span>
+                                    <span class="font-black text-slate-900 leading-none" style="font-size:clamp(3rem,10vw,5.5rem);line-height:1;letter-spacing:-4px;"><span class="counter">28</span></span>
                                     <span class="text-[#f97316] font-black mb-2" style="font-size:3rem;line-height:1;">+</span>
                                 </div>
                                 <div class="text-slate-800 font-bold text-lg mb-1">Years of Professional Practice</div>
@@ -213,12 +220,12 @@
         <!-- Right: orange with floating cards -->
         <div class="hero-right">
             <!-- CA India logo card -->
-            <div class="float-a bg-white rounded-2xl shadow-xl p-6 mb-4 w-72 z-10 flex flex-col items-center justify-center" style="min-height:180px;">
+            <div class="float-a bg-white rounded-2xl shadow-xl p-6 mb-4 z-10 flex flex-col items-center justify-center" style="width:min(288px,90vw);" style="min-height:180px;">
                 <img src="ca-india-logo.jpg" alt="CA India" style="height:110px;width:auto;object-fit:contain;">
             </div>
 
             <!-- CA India logo badge -->
-            <div class="float-b bg-white rounded-2xl shadow-xl px-5 py-5 mb-4 w-72 z-10 flex items-center gap-4">
+            <div class="float-b bg-white rounded-2xl shadow-xl px-5 py-5 mb-4 z-10 flex items-center gap-4" style="width:min(288px,90vw);">
                 <img src="ca-india-logo.jpg" alt="CA India" style="height:64px;width:auto;object-fit:contain;">
                 <div>
                     <p class="text-slate-900 font-bold text-sm">Member Firm</p>
@@ -227,7 +234,7 @@
             </div>
 
             <!-- Countries widget -->
-            <div class="float-c bg-white rounded-2xl shadow-xl px-5 py-4 w-72 z-10">
+            <div class="float-c bg-white rounded-2xl shadow-xl px-5 py-4 z-10" style="width:min(288px,90vw);">
                 <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-3">International Presence</p>
                 <div class="flex flex-wrap gap-1.5">
                     <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium">🇮🇳 India</span>
@@ -311,7 +318,7 @@
             <div class="bg-slate-50 rounded-2xl p-8 mb-10 reveal border border-slate-100">
                 <span class="text-[#f97316] text-xs font-bold uppercase tracking-widest">Our People</span>
                 <h3 class="text-xl font-bold text-slate-900 mt-2 mb-6">Leadership</h3>
-                <div class="flex flex-col sm:flex-row gap-8 items-start">
+                <div class="flex flex-col gap-6 items-start">
                     <div class="w-20 h-20 bg-[#f97316] rounded-2xl flex items-center justify-center flex-shrink-0 text-white text-2xl font-bold">DK</div>
                     <div>
                         <h4 class="text-lg font-bold text-slate-900">Shri. Dilip Kumar P.</h4>
@@ -435,7 +442,7 @@
                 <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mt-3 mb-3">Expert Perspectives</h2>
                 <p class="text-slate-500 max-w-xl mx-auto">Finance, tax, and business strategy insights from our team</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
                 <a href="insights/tax-planning.html" class="card reveal d1 group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm">
                     <div class="h-3 bg-[#f97316]"></div>
                     <div class="p-6">
@@ -494,7 +501,7 @@
                 <h2 class="text-3xl lg:text-4xl font-bold text-slate-900 mt-3 mb-3">Contact</h2>
                 <p class="text-slate-500">Reach us through any of the following</p>
             </div>
-            <div class="grid md:grid-cols-3 gap-5 mb-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
                 <a href="tel:+918041219056" class="card reveal d1 bg-slate-50 rounded-2xl p-6 text-center block border border-slate-100 group">
                     <div class="w-12 h-12 bg-[#f97316] rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
                         <i class="fas fa-phone text-white"></i>
@@ -563,7 +570,7 @@
     <!-- ── FOOTER ── -->
     <footer class="bg-slate-900 text-white pt-14 pb-8">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-10 pb-10 border-b border-white/10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pb-10 border-b border-white/10">
                 <div>
                     <img src="logo.png" alt="PDKA" class="h-10 w-auto mb-4 brightness-0 invert">
                     <p class="text-white/50 text-sm leading-relaxed mb-5">P. Dilip Kumar &amp; Associates — Chartered Accountants, Bangalore.</p>
