@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us – P. Dilip Kumar & Associates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+        .section-card { border-left: 3px solid #f97316; padding-left: 20px; }
+        .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .fade-up.visible { opacity: 1; transform: translateY(0); }
+        .d1 { transition-delay: 0.05s; }
+        .d2 { transition-delay: 0.15s; }
+        .d3 { transition-delay: 0.25s; }
+        .d4 { transition-delay: 0.35s; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- Nav -->
+    <nav style="background:rgba(255,255,255,0.97);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.07);position:sticky;top:0;z-index:50;">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
+            <a href="index.html"><img src="logo.png" alt="PDKA" style="height:38px;width:auto;"></a>
+            <div class="hidden md:flex items-center gap-8">
+                <a href="index.html#services" class="text-slate-600 hover:text-[#f97316] text-sm font-medium transition-colors">Services</a>
+                <a href="index.html#insights" class="text-slate-600 hover:text-[#f97316] text-sm font-medium transition-colors">Insights</a>
+                <a href="index.html#contact" class="text-slate-600 hover:text-[#f97316] text-sm font-medium transition-colors">Contact</a>
+            </div>
+            <a href="index.html" style="background:#f97316;color:#fff;padding:8px 20px;border-radius:9999px;font-size:14px;font-weight:600;text-decoration:none;">
+                <i class="fas fa-arrow-left mr-2 text-xs"></i>Back to Home
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero strip -->
+    <div style="background:linear-gradient(135deg,#f97316 0%,#ea580c 100%);padding:56px 24px 48px;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:-80px;right:-80px;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,0.06);pointer-events:none;"></div>
+        <div style="position:absolute;bottom:-60px;left:-40px;width:200px;height:200px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <p class="text-white/70 text-xs font-bold uppercase tracking-widest mb-3">The Firm</p>
+            <h1 class="text-4xl sm:text-5xl font-bold text-white mb-4 leading-tight">P. Dilip Kumar<br>& Associates</h1>
+            <p class="text-white/80 text-lg max-w-xl leading-relaxed">A professional firm of Chartered Accountants committed to its values, quality policy and ICAI Standards — established 1998, Bangalore.</p>
+        </div>
+    </div>
+
+    <!-- Quick stats bar -->
+    <div class="bg-white border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 py-5 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+            <div>
+                <div class="text-2xl font-bold text-[#f97316]">28+</div>
+                <div class="text-slate-500 text-xs mt-0.5">Years of Practice</div>
+            </div>
+            <div>
+                <div class="text-2xl font-bold text-[#f97316]">9</div>
+                <div class="text-slate-500 text-xs mt-0.5">Countries Served</div>
+            </div>
+            <div>
+                <div class="text-2xl font-bold text-[#f97316]">30+</div>
+                <div class="text-slate-500 text-xs mt-0.5">Audit Staff</div>
+            </div>
+            <div>
+                <div class="text-2xl font-bold text-[#f97316]">1998</div>
+                <div class="text-slate-500 text-xs mt-0.5">Est. Bangalore</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 py-12 space-y-12">
+
+        <!-- Who We Are -->
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+            <div class="fade-up">
+                <span class="text-[#f97316] text-xs font-bold uppercase tracking-widest">Who We Are</span>
+                <h2 class="text-2xl lg:text-3xl font-bold text-slate-900 mt-3 mb-5">About the Firm</h2>
+                <p class="text-slate-600 leading-relaxed mb-4">PDKA is a fast growing professional firm of Chartered Accountants committed to its values, quality policy and ICAI Standards. Over the last twenty-eight years of practice, the firm has created a niche for itself offering a bouquet of services to a selected clientele from India and other countries.</p>
+                <p class="text-slate-600 leading-relaxed mb-4">Based in Bangalore, the IT Capital of India, the firm has made a name for itself by offering end-to-end services under one roof — in particular for the IT & ITES industry and the Retail sector in India.</p>
+                <p class="text-slate-600 leading-relaxed">The firm serves clients across India, USA, Australia, Dubai, UK, Ireland, Singapore, Japan and Italy.</p>
+                <!-- Country badges -->
+                <div class="flex flex-wrap gap-2 mt-5">
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇮🇳 India</span>
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇺🇸 USA</span>
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇦🇺 Australia</span>
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇦🇪 Dubai</span>
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇬🇧 UK</span>
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇮🇪 Ireland</span>
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇸🇬 Singapore</span>
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇯🇵 Japan</span>
+                    <span class="bg-orange-50 text-[#f97316] text-xs font-semibold px-3 py-1 rounded-full border border-orange-100">🇮🇹 Italy</span>
+                </div>
+            </div>
+            <!-- Values card -->
+            <div class="fade-up d1">
+                <div class="bg-[#f97316] rounded-2xl p-7 text-white">
+                    <h3 class="text-xl font-bold mb-5">Our Values</h3>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="bg-white/10 rounded-xl p-4 flex items-center gap-3">
+                            <div class="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-handshake text-white text-sm"></i></div>
+                            <span class="font-semibold text-sm">Trust & Integrity</span>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4 flex items-center gap-3">
+                            <div class="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-balance-scale text-white text-sm"></i></div>
+                            <span class="font-semibold text-sm">Professional Ethics</span>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4 flex items-center gap-3">
+                            <div class="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-lock text-white text-sm"></i></div>
+                            <span class="font-semibold text-sm">Confidentiality</span>
+                        </div>
+                        <div class="bg-white/10 rounded-xl p-4 flex items-center gap-3">
+                            <div class="w-9 h-9 bg-white/20 rounded-lg flex items-center justify-center flex-shrink-0"><i class="fas fa-user-tie text-white text-sm"></i></div>
+                            <span class="font-semibold text-sm">Personalised Service</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Leadership -->
+        <div class="fade-up">
+            <span class="text-[#f97316] text-xs font-bold uppercase tracking-widest">Our People</span>
+            <h2 class="text-2xl lg:text-3xl font-bold text-slate-900 mt-3 mb-6">Leadership</h2>
+            <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-7 sm:p-10">
+                <div class="flex flex-col sm:flex-row gap-7 items-start">
+                    <div class="w-20 h-20 bg-[#f97316] rounded-2xl flex items-center justify-center flex-shrink-0 text-white text-2xl font-bold">DK</div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-bold text-slate-900">Shri. Dilip Kumar P.</h3>
+                        <p class="text-[#f97316] text-sm font-semibold mb-4">B.Com, FCA, CISA, DISA &nbsp;·&nbsp; Founder & Proprietor</p>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-3">The team at PDKA is led personally by him. He has more than 28 years of post-qualification experience across all areas of CA practice. He has successfully completed the internationally recognised <strong>Certified Information Systems Auditor (CISA)</strong> and ICAI's <strong>Diploma in Information Systems Auditor (DISA)</strong>, providing deep expertise in IS Audit.</p>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">He specialises in business entry strategies for foreign companies in India, business valuations, setting up internal controls & corporate governance in start-up companies, and providing CFO services to foreign companies operating in India.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-3 py-1 rounded-full">Business Entry Strategy</span>
+                            <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-3 py-1 rounded-full">Business Valuations</span>
+                            <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-3 py-1 rounded-full">IS Audit (CISA)</span>
+                            <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-3 py-1 rounded-full">Virtual CFO</span>
+                            <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-3 py-1 rounded-full">Corporate Governance</span>
+                            <span class="bg-orange-50 border border-orange-100 text-slate-600 text-xs px-3 py-1 rounded-full">Internal Controls</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quality Policy -->
+        <div class="fade-up">
+            <span class="text-[#f97316] text-xs font-bold uppercase tracking-widest">Standards</span>
+            <h2 class="text-2xl lg:text-3xl font-bold text-slate-900 mt-3 mb-6">Our Quality Policy</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 section-card">
+                    <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-certificate text-[#f97316]"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-2">ICAI Compliance</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">PDKA's objective is to be a one-stop service provider for corporate houses with strict adherence to the standards, guidelines and regulations of the Institute of Chartered Accountants of India (ICAI).</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 section-card">
+                    <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-tasks text-[#f97316]"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-2">Quality Management System</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">We maintain an efficient and effective Quality Management System (QMS). Quality is the responsibility of all members of staff, individually and collectively — without compromise on values or ICAI standards.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 section-card">
+                    <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-users text-[#f97316]"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-2">Our Audit Team</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">A dedicated and highly motivated team of around 30 audit staff completes all assignments at the highest quality. The team includes two qualified Chartered Accountants and a senior Audit Manager.</p>
+                </div>
+                <div class="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 section-card">
+                    <div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4"><i class="fas fa-sync-alt text-[#f97316]"></i></div>
+                    <h3 class="font-bold text-slate-900 mb-2">Continual Improvement</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Systems, processes, service design, delivery and communications are continually improved to conform to client requirements and expectations of the services provided.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact CTA -->
+        <div class="fade-up bg-[#f97316] rounded-2xl p-8 sm:p-10 text-center text-white">
+            <h2 class="text-2xl font-bold mb-3">Get in Touch</h2>
+            <p class="text-white/80 mb-6 text-sm max-w-md mx-auto">For professional enquiries, please reach out to us directly.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm">
+                <a href="tel:+918041219056" class="inline-flex items-center gap-2 bg-white text-[#f97316] font-bold px-6 py-2.5 rounded-full hover:bg-orange-50 transition-all">
+                    <i class="fas fa-phone text-xs"></i> 080-4121-9056
+                </a>
+                <a href="mailto:dilip@pdka.in" class="inline-flex items-center gap-2 bg-white text-[#f97316] font-bold px-6 py-2.5 rounded-full hover:bg-orange-50 transition-all">
+                    <i class="fas fa-envelope text-xs"></i> dilip@pdka.in
+                </a>
+                <a href="index.html#contact" class="inline-flex items-center gap-2 border-2 border-white/70 text-white font-bold px-6 py-2.5 rounded-full hover:bg-white/10 transition-all">
+                    Contact Form <i class="fas fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-8 mt-4">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-white/50">
+            <p>&copy; 2025 P. Dilip Kumar & Associates. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="terms-conditions.html" class="hover:text-white transition-colors">Terms</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const obs = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+    </script>
+</body>
+</html>
