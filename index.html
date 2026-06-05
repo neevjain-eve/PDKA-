@@ -28,8 +28,8 @@
         
 
         /* ── Hero: white left panel, orange right panel ── */
-        .hero-wrap { background: #fff; min-height: 100vh; display: flex; align-items: stretch; }
-        .hero-left { flex: 1; display: flex; align-items: center; padding: 7rem 4rem 4rem 4rem; padding-top: 6rem; }
+        .hero-wrap { background: #f97316; min-height: 100vh; display: flex; align-items: stretch; }
+        .hero-left { flex: 1; display: flex; align-items: center; padding: 7rem 4rem 4rem 4rem; padding-top: 6rem; background: #f97316; }
         .hero-right {
             width: 42%;
             background: #f97316;
@@ -129,8 +129,8 @@
         }
 
         /* ── Typewriter ── */
-        .typewriter { border-right: 3px solid #f97316; white-space: nowrap; overflow: hidden; animation: blink 0.75s step-end infinite; }
-        @keyframes blink { 0%,100% { border-color: #f97316; } 50% { border-color: transparent; } }
+        .typewriter { border-right: 3px solid rgba(255,255,255,0.8); white-space: nowrap; overflow: hidden; animation: blink 0.75s step-end infinite; }
+        @keyframes blink { 0%,100% { border-color: rgba(255,255,255,0.8); } 50% { border-color: transparent; } }
 
         /* ── Floating cards on right ── */
         @keyframes floatA { 0%,100% { margin-top: 0px; } 50% { margin-top: -12px; } }
@@ -239,24 +239,24 @@
         <!-- Left: white -->
         <div class="hero-left">
             <div class="max-w-xl">
-                <div class="inline-flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-full px-4 py-1.5 mb-7">
-                    <span class="pulse-dot w-2 h-2 rounded-full bg-[#f97316] inline-block"></span>
-                    <span class="text-[#f97316] text-xs font-semibold tracking-wide uppercase">Chartered Accountants · Est. 1998</span>
+                <div class="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-4 py-1.5 mb-7">
+                    <span class="pulse-dot w-2 h-2 rounded-full bg-white inline-block"></span>
+                    <span class="text-white text-xs font-semibold tracking-wide uppercase">Chartered Accountants · Est. 1998</span>
                 </div>
-                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-slate-900 leading-[1.1] mb-3">
+                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-3">
                     Empowering<br>Businesses with
                 </h1>
-                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-[#f97316] leading-[1.1] mb-6">
+                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-6">
                     <span id="typewriter" class="typewriter"></span>
                 </h1>
-                <p class="text-slate-500 text-lg max-w-md mb-8 leading-relaxed">
+                <p class="text-white/80 text-lg max-w-md mb-8 leading-relaxed">
                     A professional firm of Chartered Accountants committed to its values, quality policy and ICAI Standards.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 mb-8" style="flex-wrap:wrap;">
-                    <a href="#services" class="inline-flex items-center gap-2 bg-[#f97316] text-white font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-[#ea6d0e] hover:shadow-lg shadow-orange-200 transition-all duration-300 hover:-translate-y-0.5">
+                    <a href="#services" class="inline-flex items-center gap-2 bg-white text-[#f97316] font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-orange-50 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
                         <i class="fas fa-rocket text-xs"></i> Explore Services
                     </a>
-                    <a href="#contact" class="inline-flex items-center gap-2 border-2 border-slate-200 text-slate-700 font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:border-[#f97316] hover:text-[#f97316] transition-all duration-300">
+                    <a href="#contact" class="inline-flex items-center gap-2 border-2 border-white/60 text-white font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-white/10 transition-all duration-300">
                         <i class="fas fa-phone text-xs"></i> Contact Us
                     </a>
                 </div>
