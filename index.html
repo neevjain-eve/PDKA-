@@ -41,9 +41,12 @@
             background: rgba(255,255,255,0.05); top: -200px; right: -200px; pointer-events: none;
         }
         .hero-right::after {
+            display: none;
+        }
+        .hero-wrap::before {
             content: '';
-            position: absolute; width: 300px; height: 300px; border-radius: 50%;
-            background: rgba(255,255,255,0.08); bottom: -180px; left: -180px; top: auto; transform: none; pointer-events: none;
+            position: absolute; width: 380px; height: 380px; border-radius: 50%;
+            background: rgba(255,255,255,0.09); bottom: -140px; left: -100px; pointer-events: none; z-index: 0;
         }
         /* ── RESPONSIVE ── */
 
