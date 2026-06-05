@@ -223,53 +223,52 @@
         <div class="hero-right" style="padding:0;overflow:hidden;justify-content:center;align-items:center;">
 
             <!-- Animated canvas background -->
-            <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.18;"></canvas>
+            <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.15;"></canvas>
 
-            <!-- Content over canvas -->
-            <div style="position:relative;z-index:2;width:100%;padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;min-height:100%;">
+            <div style="position:relative;z-index:2;width:100%;padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;gap:2rem;min-height:100%;">
 
-                <!-- CA Logo -->
-                <img src="ca-india-logo.jpg" alt="CA India" style="height:48px;width:auto;object-fit:contain;filter:brightness(0) invert(1);opacity:0.85;margin-bottom:2.5rem;">
+                <!-- CA India Logo — actual image, white bg pill -->
+                <div style="display:inline-flex;align-items:center;background:rgba(255,255,255,0.95);border-radius:14px;padding:10px 20px;width:fit-content;">
+                    <img src="ca-india-logo.jpg" alt="CA India" style="height:44px;width:auto;object-fit:contain;">
+                </div>
 
-                <!-- Big rotating stat -->
-                <div id="heroStat" style="margin-bottom:2rem;">
-                    <div id="heroStatNum" style="font-size:clamp(4rem,8vw,6rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-3px;transition:all 0.5s ease;">28+</div>
-                    <div id="heroStatLabel" style="font-size:13px;font-weight:600;color:rgba(255,255,255,0.65);letter-spacing:0.1em;text-transform:uppercase;margin-top:6px;transition:all 0.5s ease;">Years of Practice</div>
-                    <!-- Animated underline -->
-                    <div style="height:3px;background:rgba(255,255,255,0.3);border-radius:2px;margin-top:12px;overflow:hidden;">
-                        <div id="heroStatBar" style="height:100%;background:#fff;border-radius:2px;animation:statBarFill 4s linear infinite;"></div>
+                <!-- 2x2 Stats grid -->
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.15);border-radius:20px;overflow:hidden;">
+                    <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
+                        <div style="font-size:clamp(2.2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;">28+</div>
+                        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Years of Experience</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
+                        <div style="font-size:clamp(2.2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;">9+</div>
+                        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Countries</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
+                        <div style="font-size:clamp(2.2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;">60+</div>
+                        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Professionals</div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
+                        <div style="font-size:clamp(2.2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;">6</div>
+                        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Service Areas</div>
                     </div>
                 </div>
 
                 <!-- Divider -->
-                <div style="height:1px;background:rgba(255,255,255,0.2);margin-bottom:2rem;"></div>
+                <div style="height:1px;background:rgba(255,255,255,0.18);"></div>
 
-                <!-- 3 highlight pills -->
-                <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:2.5rem;">
+                <!-- Minimal bullet points -->
+                <div style="display:flex;flex-direction:column;gap:10px;">
                     <div class="hero-pill-row">
                         <div class="hero-pill-dot"></div>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:500;">Serving clients across <strong style="color:#fff;">9 countries</strong></span>
+                        <span style="color:rgba(255,255,255,0.8);font-size:13px;">ICAI compliant · Est. <strong style="color:#fff;">1998</strong></span>
                     </div>
                     <div class="hero-pill-row">
                         <div class="hero-pill-dot"></div>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:500;"><strong style="color:#fff;">CISA & DISA</strong> certified IS Audit</span>
+                        <span style="color:rgba(255,255,255,0.8);font-size:13px;"><strong style="color:#fff;">CISA & DISA</strong> certified IS Audit</span>
                     </div>
                     <div class="hero-pill-row">
                         <div class="hero-pill-dot"></div>
-                        <span style="color:rgba(255,255,255,0.9);font-size:13px;font-weight:500;">End-to-end services under <strong style="color:#fff;">one roof</strong></span>
+                        <span style="color:rgba(255,255,255,0.8);font-size:13px;">End-to-end services under <strong style="color:#fff;">one roof</strong></span>
                     </div>
-                </div>
-
-                <!-- Service tags — horizontal scroll -->
-                <div style="display:flex;flex-wrap:wrap;gap:8px;">
-                    <span class="hero-tag">Audit</span>
-                    <span class="hero-tag">Tax</span>
-                    <span class="hero-tag">Virtual CFO</span>
-                    <span class="hero-tag">Compliance</span>
-                    <span class="hero-tag">Risk</span>
-                    <span class="hero-tag">FEMA</span>
-                    <span class="hero-tag">IS Audit</span>
-                    <span class="hero-tag">Valuation</span>
                 </div>
 
             </div>
@@ -748,35 +747,6 @@
             updateDots();
         })();
 
-
-        // ── Hero rotating stat ──
-        const stats = [
-            { num: '28+', label: 'Years of Practice' },
-            { num: '9',   label: 'Countries Served' },
-            { num: '30+', label: 'Professionals' },
-            { num: '6',   label: 'Service Areas' },
-        ];
-        let si = 0;
-        const sNum = document.getElementById('heroStatNum');
-        const sLbl = document.getElementById('heroStatLabel');
-        const sBar = document.getElementById('heroStatBar');
-        if (sNum) {
-            setInterval(() => {
-                sNum.style.opacity = '0'; sNum.style.transform = 'translateY(-10px)';
-                sLbl.style.opacity = '0';
-                setTimeout(() => {
-                    si = (si + 1) % stats.length;
-                    sNum.textContent = stats[si].num;
-                    sLbl.textContent = stats[si].label;
-                    sNum.style.opacity = '1'; sNum.style.transform = 'translateY(0)';
-                    sLbl.style.opacity = '1';
-                    // restart bar
-                    sBar.style.animation = 'none';
-                    sBar.offsetHeight;
-                    sBar.style.animation = 'statBarFill 4s linear infinite';
-                }, 400);
-            }, 4000);
-        }
 
         // ── Hero canvas — animated geometric lines ──
         const canvas = document.getElementById('heroCanvas');
