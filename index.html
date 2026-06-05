@@ -28,14 +28,12 @@
         
 
         /* ── Hero: white left panel, orange right panel ── */
-        .hero-wrap { background: #f97316; min-height: 100vh; display: flex; align-items: stretch; }
-        .hero-left { flex: 1; display: flex; align-items: center; padding: 7rem 4rem 4rem 4rem; padding-top: 6rem; background: #f97316; }
+        .hero-wrap { background: #f97316; min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+        .hero-left { display: flex; align-items: center; padding: 7rem 4rem 4rem 4rem; padding-top: 6rem; }
         .hero-right {
-            width: 42%;
-            background: #f97316;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
             padding: 7rem 3rem 4rem;
-            position: relative; clip-path: inset(0);
+            position: relative;
         }
         .hero-right::before {
             content: '';
@@ -45,15 +43,15 @@
         .hero-right::after {
             content: '';
             position: absolute; width: 300px; height: 300px; border-radius: 50%;
-            background: rgba(255,255,255,0.07); top: 50%; left: -220px; transform: translateY(-50%); pointer-events: none;
+            background: rgba(255,255,255,0.08); top: 50%; left: -260px; transform: translateY(-50%); pointer-events: none;
         }
         /* ── RESPONSIVE ── */
 
         /* Tablet & below (< 1024px) */
         @media (max-width: 1023px) {
-            .hero-wrap { flex-direction: column !important; }
+            .hero-wrap { grid-template-columns: 1fr !important; }
             .hero-left { padding: 5.5rem 1.5rem 2rem !important; }
-            .hero-right { width: 100% !important; padding: 2rem 1.5rem 3rem !important; min-height: auto !important; }
+            .hero-right { padding: 2rem 1.5rem 3rem !important; min-height: auto !important; }
             #heroCanvas { height: 100% !important; }
         }
 
