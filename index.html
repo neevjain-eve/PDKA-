@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <title>P. Dilip Kumar & Associates (PDKA) | Financial Excellence</title>
     <meta name="description" content="Chartered Accountancy firm providing Audit, Tax Advisory, Virtual CFO & Business Consulting services.">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -47,15 +47,85 @@
             position: absolute; width: 300px; height: 300px; border-radius: 50%;
             background: rgba(255,255,255,0.05); bottom: -80px; left: -80px; pointer-events: none;
         }
+        /* ── RESPONSIVE ── */
+
+        /* Tablet & below (< 1024px) */
         @media (max-width: 1023px) {
-            .hero-wrap { flex-direction: column; }
-            .hero-left { padding: 5rem 1.25rem 2rem; }
-            .hero-right { width: 100%; padding: 2rem 1.25rem 3rem; }
-            .float-a, .float-b, .float-c { width: 100% !important; max-width: 340px; }
+            .hero-wrap { flex-direction: column !important; }
+            .hero-left { padding: 5.5rem 1.5rem 2rem !important; }
+            .hero-right { width: 100% !important; padding: 2rem 1.5rem 3rem !important; min-height: auto !important; }
+            #heroCanvas { height: 100% !important; }
         }
+
+        /* Mobile (< 640px) */
         @media (max-width: 640px) {
-            .hero-left { padding: 5rem 1rem 1.5rem; }
-            .hero-right { padding: 1.5rem 1rem 2.5rem; }
+            /* Hero left */
+            .hero-left { padding: 4.5rem 1rem 1.5rem !important; }
+            .hero-right { padding: 1.5rem 1rem 2.5rem !important; }
+
+            /* Typewriter — prevent overflow */
+            .typewriter { white-space: normal !important; border-right: none !important; }
+
+            /* Buttons stack */
+            .hero-left .flex { flex-direction: column !important; }
+            .hero-left .flex a { width: 100% !important; justify-content: center !important; }
+
+            /* Stats 2x2 — smaller text */
+            #heroStatsGrid > div { padding: 1rem !important; }
+            #heroStatsGrid span { font-size: 1.75rem !important; }
+
+            /* Credentials strip — wrap tighter */
+            .hero-right > div:last-of-type { gap: 6px !important; }
+
+            /* Nav pill hidden on mobile (hamburger takes over) */
+            #navbar { display: none !important; }
+
+            /* Sections padding */
+            section { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
+
+            /* Section headings */
+            h2 { font-size: 1.6rem !important; }
+
+            /* Service cards — full width */
+            .grid.md\:grid-cols-2.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
+
+            /* Insights slider — 1 card */
+            #insights-track > a { width: calc(100vw - 3rem) !important; min-width: 0 !important; }
+
+            /* Contact grid — 1 col */
+            .grid.grid-cols-1.sm\:grid-cols-2.md\:grid-cols-3 { grid-template-columns: 1fr !important; }
+
+            /* Careers grid */
+            .grid.md\:grid-cols-2 { grid-template-columns: 1fr !important; }
+
+            /* About grid */
+            .grid.lg\:grid-cols-2 { grid-template-columns: 1fr !important; }
+
+            /* Footer grid */
+            .grid.grid-cols-1.sm\:grid-cols-2.lg\:grid-cols-4 { grid-template-columns: 1fr !important; }
+            .grid.grid-cols-1.sm\:grid-cols-2.md\:grid-cols-4 { grid-template-columns: 1fr !important; }
+
+            /* DPDPA banner stack */
+            .flex.flex-col.lg\:flex-row { flex-direction: column !important; }
+
+            /* Credentials bottom strip */
+            .flex.flex-wrap.items-center.justify-center { gap: 8px !important; }
+
+            /* Form grid */
+            .grid.sm\:grid-cols-2 { grid-template-columns: 1fr !important; }
+
+            /* Contact info flex */
+            .flex.flex-col.sm\:flex-row { flex-direction: column !important; }
+
+            /* CA Logo card */
+            #heroStatsGrid { margin-top: 1rem !important; }
+        }
+
+        /* Very small (< 380px) */
+        @media (max-width: 380px) {
+            .hero-left h1 { font-size: 1.9rem !important; }
+            #heroStatsGrid span { font-size: 1.5rem !important; }
+            .hero-right > div > img { height: 90px !important; }
         }
 
         /* ── Typewriter ── */
@@ -182,7 +252,7 @@
                 <p class="text-slate-500 text-lg max-w-md mb-8 leading-relaxed">
                     A professional firm of Chartered Accountants committed to its values, quality policy and ICAI Standards.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3 mb-8">
+                <div class="flex flex-col sm:flex-row gap-3 mb-8" style="flex-wrap:wrap;">
                     <a href="#services" class="inline-flex items-center gap-2 bg-[#f97316] text-white font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-[#ea6d0e] hover:shadow-lg shadow-orange-200 transition-all duration-300 hover:-translate-y-0.5">
                         <i class="fas fa-rocket text-xs"></i> Explore Services
                     </a>
@@ -216,19 +286,19 @@
                 <!-- 2x2 Stats grid — animated -->
                 <div id="heroStatsGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.15);border-radius:20px;overflow:hidden;">
                     <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
-                        <div style="font-size:clamp(2.2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="28" data-suffix="+">0</span></div>
+                        <div style="font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="28" data-suffix="+">0</span></div>
                         <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Years of Experience</div>
                     </div>
                     <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
-                        <div style="font-size:clamp(2.2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="9" data-suffix="+">0</span></div>
+                        <div style="font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="9" data-suffix="+">0</span></div>
                         <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Countries</div>
                     </div>
                     <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
-                        <div style="font-size:clamp(2.2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="60" data-suffix="+">0</span></div>
+                        <div style="font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="60" data-suffix="+">0</span></div>
                         <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Professionals</div>
                     </div>
                     <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
-                        <div style="font-size:clamp(2.2rem,4vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="6" data-suffix="">0</span></div>
+                        <div style="font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="6" data-suffix="">0</span></div>
                         <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Service Areas</div>
                     </div>
                 </div>
@@ -283,7 +353,7 @@
     </section>
 
     <!-- ── SERVICES ── -->
-    <section id="services" class="py-10 bg-slate-50">
+    <section id="services" class="py-8 sm:py-10 bg-slate-50">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="text-center mb-8 reveal">
                 <span class="text-[#f97316] text-xs font-bold uppercase tracking-widest">Services</span>
@@ -343,7 +413,7 @@
     </section>
 
     <!-- ── INSIGHTS ── -->
-    <section id="insights" class="py-10 bg-white">
+    <section id="insights" class="py-8 sm:py-10 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex items-end justify-between mb-6 reveal">
                 <div>
@@ -361,7 +431,7 @@
             <div style="overflow:hidden;position:relative;">
                 <div id="insights-track" style="display:flex;gap:24px;transition:transform 0.45s cubic-bezier(0.4,0,0.2,1);">
 
-                    <a href="insights/dpdpa-compliance.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:280px;">
+                    <a href="insights/dpdpa-compliance.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:min(280px, 85vw);">
                         <div class="h-3 bg-[#f97316]"></div>
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
@@ -374,7 +444,7 @@
                         </div>
                     </a>
 
-                    <a href="insights/budget-2025.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:280px;">
+                    <a href="insights/budget-2025.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:min(280px, 85vw);">
                         <div class="h-3 bg-[#ea6d0e]"></div>
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
@@ -387,7 +457,7 @@
                         </div>
                     </a>
 
-                    <a href="insights/gst-2025.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:280px;">
+                    <a href="insights/gst-2025.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:min(280px, 85vw);">
                         <div class="h-3 bg-[#f97316]"></div>
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
@@ -400,7 +470,7 @@
                         </div>
                     </a>
 
-                    <a href="insights/itr-filing-2025.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:280px;">
+                    <a href="insights/itr-filing-2025.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:min(280px, 85vw);">
                         <div class="h-3 bg-[#ea6d0e]"></div>
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
@@ -413,7 +483,7 @@
                         </div>
                     </a>
 
-                    <a href="insights/fema-foreign-remittance.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:280px;">
+                    <a href="insights/fema-foreign-remittance.html" class="card group block bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-sm flex-shrink-0" style="width:calc(33.333% - 16px);min-width:min(280px, 85vw);">
                         <div class="h-3 bg-[#f97316]"></div>
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
@@ -440,7 +510,7 @@
 
 
     <!-- ── CAREERS ── -->
-    <section id="careers" class="py-10 bg-white" style="border-top:1px solid #f1f5f9!important;">
+    <section id="careers" class="py-8 sm:py-10 bg-white" style="border-top:1px solid #f1f5f9!important;">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <!-- Header -->
             <div class="mb-8 reveal">
@@ -529,7 +599,7 @@
                     <div style="flex-shrink:0;text-align:center;">
                         <div style="background:rgba(255,255,255,0.15);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.3);border-radius:20px;padding:1.5rem 2rem;">
                             <div style="font-size:11px;color:rgba(255,255,255,0.7);font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem;">Time to Full Enforcement</div>
-                            <div id="dpdpaCountdown" style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px;">
+                            <div id="dpdpaCountdown" style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;min-width:220px;">
                                 <div style="text-align:center;">
                                     <div id="dpdpaDays" style="font-size:2rem;font-weight:900;color:#fff;line-height:1;">--</div>
                                     <div style="font-size:9px;color:rgba(255,255,255,0.6);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;margin-top:2px;">Days</div>
@@ -555,7 +625,7 @@
     </section>
 
     <!-- ── CONTACT ── -->
-    <section id="contact" class="py-10 bg-white">
+    <section id="contact" class="py-8 sm:py-10 bg-white">
         <div class="max-w-7xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between mb-8 gap-4 reveal">
                 <div>
@@ -591,7 +661,7 @@
                 </a>
             </div>
             <!-- Form -->
-            <div class="max-w-2xl mx-auto bg-slate-50 rounded-2xl p-8 border border-slate-100 reveal">
+            <div class="max-w-2xl mx-auto bg-slate-50 rounded-2xl p-6 sm:p-8 border border-slate-100 reveal">
                 <h3 class="text-xl font-bold text-slate-900 mb-6">Send us a Message</h3>
                 <form class="space-y-4">
                     <div class="grid sm:grid-cols-2 gap-4">
