@@ -78,7 +78,7 @@
         
 
         /* ── Hero: white left panel, orange right panel ── */
-        .hero-wrap { background: #f97316; min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; }
+        .hero-wrap { display: none; }
         .hero-left { display: flex; align-items: center; padding: 7rem 4rem 4rem 4rem; padding-top: 6rem; }
         .hero-right {
             display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -109,6 +109,11 @@
         }
 
         /* Mobile (< 640px) */
+        @media (max-width: 768px) {
+            #heroInner { grid-template-columns: 1fr !important; padding-left: 1.25rem !important; }
+            #heroInner h1 { font-size: 32px !important; }
+            #heroInner p { font-size: 15px !important; }
+        }
         @media (max-width: 640px) {
             /* Hero left */
             .hero-left { padding: 4.5rem 1rem 1.5rem !important; }
@@ -286,106 +291,73 @@
     </div>
 
     <!-- ── HERO ── -->
-    <section id="home" class="hero-wrap" style="padding-top:0;">
-        <!-- Left: white -->
-        <div class="hero-left">
-            <div class="max-w-xl">
-                <div class="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-4 py-1.5 mb-7">
-                    <span class="pulse-dot w-2 h-2 rounded-full bg-white inline-block"></span>
-                    <span class="text-white text-xs font-semibold tracking-wide uppercase">Chartered Accountants · Est. 1998</span>
+    <section id="home" style="background:#fff!important;min-height:100vh!important;display:flex!important;align-items:center!important;padding-top:84px!important;padding-bottom:60px!important;">
+        <div style="max-width:1200px!important;margin:0 auto!important;padding:0 2rem!important;width:100%!important;border-left:6px solid #f97316!important;padding-left:2.5rem!important;display:grid!important;grid-template-columns:60% 40%!important;gap:40px!important;align-items:center!important;" id="heroInner">
+
+            <!-- LEFT COLUMN -->
+            <div>
+                <!-- Pill label -->
+                <div style="display:inline-block!important;background:#fff7ed!important;color:#c2410c!important;border:1px solid #fed7aa!important;border-radius:20px!important;font-size:12px!important;padding:4px 14px!important;margin-bottom:16px!important;font-weight:600!important;">
+                    Chartered Accountants · Bangalore · Est. 1998
                 </div>
-                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-white leading-[1.1] mb-3">
+
+                <!-- Heading -->
+                <h1 style="font-size:56px!important;font-weight:700!important;color:#111827!important;line-height:1.15!important;margin:0 0 4px 0!important;">
                     Empowering<br>Businesses with
                 </h1>
-                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold leading-[1.1] mb-6" style="color:#185888!important;">
+                <h1 style="font-size:56px!important;font-weight:700!important;line-height:1.15!important;margin:0 0 0 0!important;color:#185888!important;">
                     <span id="typewriter" class="typewriter"></span>
                 </h1>
-                <p class="text-white/80 text-lg max-w-md mb-8 leading-relaxed">
-                    A professional firm of Chartered Accountants committed to its values, quality policy and ICAI Standards.
+
+                <!-- Subtitle -->
+                <p style="font-size:18px!important;color:#6b7280!important;max-width:520px!important;line-height:1.7!important;margin-top:16px!important;margin-bottom:24px!important;">
+                    A Bangalore-based CA firm with 28 years of experience — specialists in Audit, Tax, FEMA, IS Audit (CISA/DISA) and Virtual CFO services across India and 9 countries.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-3 mb-8" style="flex-wrap:wrap;">
-                    <a href="#services" class="inline-flex items-center gap-2 bg-white text-[#f97316] font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-orange-50 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5">
-                        <i class="fas fa-rocket text-xs"></i> Explore Services
+
+                <!-- CTA Buttons -->
+                <div style="display:flex!important;gap:14px!important;flex-wrap:wrap!important;">
+                    <a href="#services" style="background:#f97316!important;color:white!important;padding:14px 28px!important;border-radius:8px!important;font-weight:600!important;font-size:15px!important;border:none!important;text-decoration:none!important;display:inline-flex!important;align-items:center!important;gap:8px!important;transition:background 0.2s!important;" onmouseover="this.style.background='#ea580c'" onmouseout="this.style.background='#f97316'">
+                        <i class="fas fa-rocket" style="font-size:12px!important;"></i> Explore Services
                     </a>
-                    <a href="#contact" class="inline-flex items-center gap-2 border-2 border-white/60 text-white font-bold px-7 py-3.5 rounded-full text-sm uppercase tracking-wide hover:bg-white/10 transition-all duration-300">
-                        <i class="fas fa-phone text-xs"></i> Contact Us
+                    <a href="#contact" style="background:white!important;color:#f97316!important;border:2px solid #f97316!important;padding:14px 28px!important;border-radius:8px!important;font-weight:600!important;font-size:15px!important;text-decoration:none!important;display:inline-flex!important;align-items:center!important;gap:8px!important;transition:background 0.2s!important;" onmouseover="this.style.background='#fff7ed'" onmouseout="this.style.background='white'">
+                        <i class="fas fa-phone" style="font-size:12px!important;"></i> Contact Us
                     </a>
-                </div>
-                            <!-- Bottom bar -->
-                            <div class="mt-5 h-1.5 rounded-full bg-orange-100 overflow-hidden">
-                                <div class="h-full rounded-full" style="background:linear-gradient(90deg,#f97316,#ea580c);width:100%;animation:fill 2s ease forwards;"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Right: orange with floating cards -->
-        <div class="hero-right" style="padding:0;overflow:hidden;justify-content:center;align-items:center;">
-
-            <!-- Animated canvas background -->
-            <canvas id="heroCanvas" style="position:absolute;inset:0;width:100%;height:100%;opacity:0.15;"></canvas>
-
-            <div style="position:relative;z-index:2;width:100%;padding:3rem 2.5rem;display:flex;flex-direction:column;justify-content:center;gap:2rem;min-height:100%;">
-
-                <!-- CA India Logo — large, prominent, no clipping -->
-                <div style="background:#ffffff;border-radius:24px;padding:28px 32px;display:flex;align-items:center;justify-content:center;width:100%;box-shadow:0 12px 48px rgba(0,0,0,0.18);border:1px solid rgba(0,0,0,0.04);">
-                    <img src="ca-india-logo.jpg" alt="CA India" style="height:160px;width:100%;max-width:100%;object-fit:contain;display:block;">
-                </div>
-
-                <!-- 2x2 Stats grid — animated -->
-                <div id="heroStatsGrid" style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.15);border-radius:20px;overflow:hidden;">
-                    <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
-                        <div style="font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="28" data-suffix="+">0</span></div>
-                        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Years of Experience</div>
+            <!-- RIGHT COLUMN -->
+            <div>
+                <!-- Stats card -->
+                <div id="heroStatsGrid" style="border:2px solid #f97316!important;border-radius:16px!important;padding:32px!important;background:#fff7ed!important;display:grid!important;grid-template-columns:1fr 1fr!important;gap:24px!important;margin-bottom:16px!important;">
+                    <div>
+                        <div style="font-size:36px!important;font-weight:700!important;color:#f97316!important;line-height:1!important;"><span class="stat-count" data-target="28" data-suffix="+">0</span></div>
+                        <div style="font-size:13px!important;color:#6b7280!important;margin-top:4px!important;font-weight:500!important;">Years of Experience</div>
                     </div>
-                    <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
-                        <div style="font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="9" data-suffix="+">0</span></div>
-                        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Countries</div>
+                    <div>
+                        <div style="font-size:36px!important;font-weight:700!important;color:#f97316!important;line-height:1!important;"><span class="stat-count" data-target="9" data-suffix="+">0</span></div>
+                        <div style="font-size:13px!important;color:#6b7280!important;margin-top:4px!important;font-weight:500!important;">Countries</div>
                     </div>
-                    <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
-                        <div style="font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="60" data-suffix="+">0</span></div>
-                        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Professionals</div>
+                    <div>
+                        <div style="font-size:36px!important;font-weight:700!important;color:#f97316!important;line-height:1!important;"><span class="stat-count" data-target="60" data-suffix="+">0</span></div>
+                        <div style="font-size:13px!important;color:#6b7280!important;margin-top:4px!important;font-weight:500!important;">Professionals</div>
                     </div>
-                    <div style="background:rgba(255,255,255,0.08);padding:1.6rem 1.5rem;">
-                        <div style="font-size:clamp(1.6rem,5vw,3rem);font-weight:900;color:#fff;line-height:1;letter-spacing:-1px;"><span class="stat-count" data-target="6" data-suffix="">0</span></div>
-                        <div style="font-size:11px;color:rgba(255,255,255,0.6);margin-top:6px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;">Service Areas</div>
+                    <div>
+                        <div style="font-size:36px!important;font-weight:700!important;color:#f97316!important;line-height:1!important;"><span class="stat-count" data-target="6" data-suffix="">0</span></div>
+                        <div style="font-size:13px!important;color:#6b7280!important;margin-top:4px!important;font-weight:500!important;">Service Areas</div>
                     </div>
                 </div>
 
-                <!-- Credentials strip -->
-                <div style="display:flex!important;flex-wrap:wrap!important;gap:8px!important;">
-                    <span style="background:rgba(255,255,255,0.18)!important;border:1px solid rgba(255,255,255,0.35)!important;color:#fff!important;font-size:11px!important;font-weight:700!important;padding:5px 13px!important;border-radius:9999px!important;letter-spacing:0.04em!important;white-space:nowrap!important;">ICAI Registered</span>
-                    <span style="background:rgba(255,255,255,0.18)!important;border:1px solid rgba(255,255,255,0.35)!important;color:#fff!important;font-size:11px!important;font-weight:700!important;padding:5px 13px!important;border-radius:9999px!important;letter-spacing:0.04em!important;white-space:nowrap!important;">FCA · Est. 1998</span>
-                    <span style="background:rgba(255,255,255,0.18)!important;border:1px solid rgba(255,255,255,0.35)!important;color:#fff!important;font-size:11px!important;font-weight:700!important;padding:5px 13px!important;border-radius:9999px!important;letter-spacing:0.04em!important;white-space:nowrap!important;">CISA Certified</span>
-                    <span style="background:rgba(255,255,255,0.18)!important;border:1px solid rgba(255,255,255,0.35)!important;color:#fff!important;font-size:11px!important;font-weight:700!important;padding:5px 13px!important;border-radius:9999px!important;letter-spacing:0.04em!important;white-space:nowrap!important;">DISA Certified</span>
-                    <span style="background:rgba(255,255,255,0.08)!important;border:1px solid rgba(255,255,255,0.2)!important;color:rgba(255,255,255,0.7)!important;font-size:11px!important;font-weight:600!important;padding:5px 13px!important;border-radius:9999px!important;letter-spacing:0.04em!important;white-space:nowrap!important;">IS Audit Specialist</span>
-                    <span style="background:rgba(255,255,255,0.08)!important;border:1px solid rgba(255,255,255,0.2)!important;color:rgba(255,255,255,0.7)!important;font-size:11px!important;font-weight:600!important;padding:5px 13px!important;border-radius:9999px!important;letter-spacing:0.04em!important;white-space:nowrap!important;">9 Countries</span>
+                <!-- Trust pills -->
+                <div style="display:flex!important;gap:8px!important;margin-top:16px!important;flex-wrap:wrap!important;">
+                    <span style="background:white!important;border:1px solid #fed7aa!important;color:#c2410c!important;font-size:11px!important;padding:4px 10px!important;border-radius:20px!important;font-weight:600!important;">✓ ICAI Registered</span>
+                    <span style="background:white!important;border:1px solid #fed7aa!important;color:#c2410c!important;font-size:11px!important;padding:4px 10px!important;border-radius:20px!important;font-weight:600!important;">✓ CISA Certified</span>
+                    <span style="background:white!important;border:1px solid #fed7aa!important;color:#c2410c!important;font-size:11px!important;padding:4px 10px!important;border-radius:20px!important;font-weight:600!important;">✓ DISA Certified</span>
                 </div>
-
-                <!-- Divider -->
-                <div style="height:1px;background:rgba(255,255,255,0.18);"></div>
-
-                <!-- Minimal bullet points -->
-                <div style="display:flex;flex-direction:column;gap:10px;">
-                    <div class="hero-pill-row">
-                        <div class="hero-pill-dot"></div>
-                        <span style="color:rgba(255,255,255,0.8);font-size:13px;">ICAI compliant · Est. <strong style="color:#fff;">1998</strong></span>
-                    </div>
-                    <div class="hero-pill-row">
-                        <div class="hero-pill-dot"></div>
-                        <span style="color:rgba(255,255,255,0.8);font-size:13px;"><strong style="color:#fff;">CISA & DISA</strong> certified IS Audit</span>
-                    </div>
-                    <div class="hero-pill-row">
-                        <div class="hero-pill-dot"></div>
-                        <span style="color:rgba(255,255,255,0.8);font-size:13px;">End-to-end services under <strong style="color:#fff;">one roof</strong></span>
-                    </div>
-                </div>
-
             </div>
+
         </div>
     </section>
+    <div style="border-top:1px solid #fed7aa!important;width:100%!important;"></div>
 
     <!-- ── ABOUT ── -->
     <section id="about" class="py-14 bg-white border-b border-slate-100">
@@ -1018,55 +990,7 @@
         })();
 
 
-        // ── Hero canvas — animated geometric lines ──
-        const canvas = document.getElementById('heroCanvas');
-        if (canvas) {
-            const ctx = canvas.getContext('2d');
-            let W, H, nodes = [];
-            function resize() {
-                W = canvas.width = canvas.offsetWidth;
-                H = canvas.height = canvas.offsetHeight;
-            }
-            resize();
-            window.addEventListener('resize', resize);
-            for (let i = 0; i < 22; i++) {
-                nodes.push({
-                    x: Math.random() * 1000, y: Math.random() * 1000,
-                    vx: (Math.random() - 0.5) * 0.5,
-                    vy: (Math.random() - 0.5) * 0.5,
-                    r: Math.random() * 3 + 1.5
-                });
-            }
-            function drawCanvas() {
-                ctx.clearRect(0, 0, W, H);
-                nodes.forEach(n => {
-                    n.x += n.vx; n.y += n.vy;
-                    if (n.x < 0 || n.x > W) n.vx *= -1;
-                    if (n.y < 0 || n.y > H) n.vy *= -1;
-                    ctx.beginPath();
-                    ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-                    ctx.fillStyle = 'rgba(255,255,255,0.8)';
-                    ctx.fill();
-                });
-                for (let i = 0; i < nodes.length; i++) {
-                    for (let j = i + 1; j < nodes.length; j++) {
-                        const dx = nodes[i].x - nodes[j].x;
-                        const dy = nodes[i].y - nodes[j].y;
-                        const dist = Math.sqrt(dx*dx + dy*dy);
-                        if (dist < 140) {
-                            ctx.beginPath();
-                            ctx.moveTo(nodes[i].x, nodes[i].y);
-                            ctx.lineTo(nodes[j].x, nodes[j].y);
-                            ctx.strokeStyle = `rgba(255,255,255,${0.6 * (1 - dist/140)})`;
-                            ctx.lineWidth = 0.8;
-                            ctx.stroke();
-                        }
-                    }
-                }
-                requestAnimationFrame(drawCanvas);
-            }
-            drawCanvas();
-        }
+        // canvas removed — new hero design
 
 
         // ── Hero stat count-up — fast (600ms), repeats every 3s ──
